@@ -26,9 +26,9 @@ export function SiteFooter() {
           <div>
             <Logo variant="light" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
-              Más de 20 años entregando soluciones de instrumentación y
-              automatización a la industria chilena, con cobertura nacional y
-              soporte técnico especializado.
+              Empresa chilena especializada en mangueras hidráulicas e industriales.
+              Representamos marcas internacionales de prestigio, con asesoría técnica
+              responsable y cobertura nacional.
             </p>
             <div className="mt-5 flex gap-3">
               {socials.map((s) => (
@@ -80,15 +80,15 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-3 text-sm text-white/70">
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-accent" />
-                Av. Industrial 1234, Santiago, Chile
+                Nueva Providencia 2134, Of. 1001, RM
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="size-4 shrink-0 text-accent" />
-                +56 2 2345 6789
+                +56 9 7724 1488
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="size-4 shrink-0 text-accent" />
-                ventas@hto.cl
+                contacto@htochile.cl
               </li>
             </ul>
             <h3 className="mt-6 text-sm font-semibold uppercase tracking-wider text-white">
