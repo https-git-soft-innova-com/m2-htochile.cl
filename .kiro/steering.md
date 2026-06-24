@@ -24,16 +24,16 @@ Elementos a incorporar de M1 y M3 según reunión con Caro.
 
 | # | Título | Estado | Branch |
 |---|--------|--------|--------|
-| 1 | Actualizar site-data.ts con datos reales | 🔄 En progreso | feature/issue-1 |
-| 2 | Hero - Agregar barra de certificaciones | ⏳ Pendiente | — |
-| 3 | Hero - Cambiar textos slider | ⏳ Pendiente | — |
-| 4 | Productos destacados - Reestructurar categorías | ⏳ Pendiente | — |
+| 1 | Actualizar site-data.ts con datos reales | ✅ Cerrado | PR #16 |
+| 2 | Hero - Agregar barra de certificaciones | ✅ Cerrado | PR #17 |
+| 3 | Hero - Cambiar textos slider | ✅ Hecho en #1 | — |
+| 4 | Productos destacados - Reestructurar categorías | ✅ Hecho en #1 | — |
 | 5 | Sección Colaboradores - Nueva sección | ⏳ Pendiente | — |
-| 6 | Modal Biblioteca Técnica - Formulario captura | ⏳ Pendiente | — |
-| 7 | Industrias - Agregar faltantes | ⏳ Pendiente | — |
+| 6 | Modal Biblioteca Técnica - Formulario captura | ✅ Cerrado | PR #18 |
+| 7 | Industrias - Agregar faltantes | ✅ Hecho en #1 | — |
 | 8 | WhatsApp contextual | ⏳ Pendiente | — |
-| 9 | Quiénes Somos - Estilo M3 | ⏳ Pendiente | — |
-| 10 | Marcas que representamos - Barra logos | ⏳ Pendiente | — |
+| 9 | Quiénes Somos - Estilo M3 | ✅ Cerrado | PR #20 |
+| 10 | Marcas que representamos - Barra logos | ✅ Cerrado | PR #19 |
 | 11 | Blog - Subsitio con EM-DASH (MCP) | ⏳ Pendiente | — |
 | 12 | Imágenes Hero - Reemplazo | 🚫 Bloqueado (Caro) | — |
 | 13 | Productos - Contenido real | 🚫 Bloqueado (Caro) | — |
@@ -85,4 +85,44 @@ ISO 9001, DNV, RINA, Lloyd's Register, Bureau Veritas, MSHA, SICEP
 
 ### Issue #1 — Actualizar site-data.ts
 - Fecha inicio: 2026-06-23
-- Estado: En progreso
+- Fecha cierre: 2026-06-23
+- Commit: f770ef5
+- PR: #16 (mergeado)
+- Aprobado por: Felipe
+
+### Issue #2 — Hero - Agregar barra de certificaciones
+- Fecha inicio: 2026-06-23
+- Fecha cierre: 2026-06-23
+- Commit: 1983513
+- PR: #17 (mergeado)
+- Aprobado por: Felipe
+- Detalle: 3 cards glass (ISO 9001, DNV·RINA·Lloyd's, Presencia en Todo Chile)
+
+### Issue #6 — Modal Biblioteca Técnica
+- Fecha inicio: 2026-06-23
+- Fecha cierre: 2026-06-23
+- PR: #18 (mergeado)
+- Aprobado por: Felipe
+- Detalle: Modal persiana, formulario Nombre/Empresa/Email/Celular, checkbox Ley 21.719
+
+### Issue #10 — Marcas que representamos
+- Fecha inicio: 2026-06-23
+- Fecha cierre: 2026-06-23
+- PR: #19 (mergeado)
+- Aprobado por: Felipe
+- Detalle: Barra marquee scroll infinito entre Hero y Benefits
+
+### Issue #9 — Quiénes Somos estilo M3
+- Fecha inicio: 2026-06-23
+- Fecha cierre: 2026-06-23
+- PR: #20 (mergeado)
+- Aprobado por: Felipe
+- Detalle: 4 cards Misión/Visión/Origen/Slogan, contenido real HTO
+
+---
+
+## Pendientes para mañana
+1. **#5** — Sección Colaboradores (placeholders foto+cargo)
+2. **#8** — WhatsApp contextual (mensaje según página)
+3. **#11** — Blog subsitio con EM-DASH (MCP)
+4. **#12-#15** — Bloqueados por contenido de Caro
