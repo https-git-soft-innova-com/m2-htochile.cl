@@ -19,6 +19,7 @@ import {
   docTypes,
   whatsappUrl,
 } from "@/lib/site-data"
+import { BibliotecaModal, type BibliotecaFormData } from "@/components/biblioteca-modal"
 
 const ALL = "all"
 
@@ -27,6 +28,8 @@ export function DocSearch({ compact = false }: { compact?: boolean }) {
   const [brand, setBrand] = useState(ALL)
   const [category, setCategory] = useState(ALL)
   const [type, setType] = useState(ALL)
+  const [modalOpen, setModalOpen] = useState(false)
+  const [hasAccess, setHasAccess] = useState(false)
 
   const results = useMemo(() => {
     return techDocs.filter((d) => {
@@ -47,8 +50,29 @@ export function DocSearch({ compact = false }: { compact?: boolean }) {
 
   const shown = compact ? results.slice(0, 4) : results
 
+  function handleDownload() {
+    if (!hasAccess) {
+      setModalOpen(true)
+      return
+    }
+    // Ya tiene acceso, permitir descarga
+  }
+
+  function handleModalSubmit(data: BibliotecaFormData) {
+    // TODO: enviar datos a BD + email a Patricio
+    console.log("Biblioteca — datos capturados:", data)
+    setHasAccess(true)
+    setModalOpen(false)
+  }
+
   return (
-    <div className="rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7">
+    <>
+      <BibliotecaModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        onSubmit={handleModalSubmit}
+      />
+      <div className="rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7">
       <div className="relative">
         <Search className="absolute left-4 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" />
         <Input
@@ -121,8 +145,8 @@ export function DocSearch({ compact = false }: { compact?: boolean }) {
               </div>
             </div>
             <div className="flex shrink-0 gap-2">
-              <Button asChild size="sm" className="gap-1.5 bg-[var(--brand)] text-white hover:bg-[var(--brand-2)]">
-                <a href="#"><Download className="size-4" />Descargar</a>
+              <Button size="sm" className="gap-1.5 bg-[var(--brand)] text-white hover:bg-[var(--brand-2)]" onClick={handleDownload}>
+                <Download className="size-4" />Descargar
               </Button>
               <Button asChild size="sm" variant="outline" className="gap-1.5">
                 <a
@@ -139,5 +163,6 @@ export function DocSearch({ compact = false }: { compact?: boolean }) {
         ))}
       </div>
     </div>
+    </>
   )
 }
