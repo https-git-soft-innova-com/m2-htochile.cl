@@ -128,29 +128,26 @@ export function HomeHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55 }}
-          className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3"
+          className="mt-6 flex flex-wrap items-center justify-center gap-6 px-6 py-4 sm:max-w-3xl"
         >
-          <div className="rounded-lg border border-white/15 bg-white/5 p-4 backdrop-blur-md transition-all hover:border-white/25 hover:bg-white/10">
-            <div className="mb-1.5 flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent shrink-0"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-              <span className="text-sm font-bold text-white">ISO 9001</span>
-            </div>
-            <p className="text-xs leading-relaxed text-white/60">Procesos certificados y orientados a la calidad.</p>
-          </div>
-          <div className="rounded-lg border border-white/15 bg-white/5 p-4 backdrop-blur-md transition-all hover:border-white/25 hover:bg-white/10">
-            <div className="mb-1.5 flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent shrink-0"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-              <span className="text-sm font-bold text-white">DNV · RINA · Lloyd&apos;s</span>
-            </div>
-            <p className="text-xs leading-relaxed text-white/60">Productos respaldados por certificaciones internacionales.</p>
-          </div>
-          <div className="rounded-lg border border-white/15 bg-white/5 p-4 backdrop-blur-md transition-all hover:border-white/25 hover:bg-white/10">
-            <div className="mb-1.5 flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accent shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-              <span className="text-sm font-bold text-white">Presencia en Todo Chile</span>
-            </div>
-            <p className="text-xs leading-relaxed text-white/60">Cobertura comercial y logística nacional.</p>
-          </div>
+          {[
+            { src: "/images/certificaciones/iso-9001.png", alt: "ISO 9001" },
+            { src: "/images/certificaciones/dnvgl.png", alt: "DNV GL" },
+            { src: "/images/certificaciones/lloyds-register.png", alt: "Lloyd's Register" },
+            { src: "/images/certificaciones/bureau-veritas.png", alt: "Bureau Veritas" },
+            { src: "/images/certificaciones/rina.png", alt: "RINA" },
+            { src: "/images/certificaciones/msha.png", alt: "MSHA" },
+            { src: "/images/certificaciones/department-of-labor.png", alt: "Department of Labor" },
+            { src: "/images/certificaciones/asociacion-industrial-antofagasta.png", alt: "Asociación Industrial de Antofagasta" },
+            { src: "/images/certificaciones/sicep.png", alt: "SICEP" },
+          ].map((cert) => (
+            <img
+              key={cert.alt}
+              src={cert.src}
+              alt={cert.alt}
+              className="h-10 w-auto brightness-0 invert opacity-80 transition-opacity hover:opacity-100"
+            />
+          ))}
         </motion.div>
 
         {/* slide indicators */}

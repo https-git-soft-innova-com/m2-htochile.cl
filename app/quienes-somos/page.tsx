@@ -2,20 +2,13 @@ import type { Metadata } from "next"
 import { PageHero } from "@/components/page-hero"
 import { Reveal } from "@/components/reveal"
 import { FinalCta } from "@/components/final-cta"
-import { Target, Eye, Sparkles, Quote, ShieldCheck, Users, TrendingUp, HeartHandshake } from "lucide-react"
+import { Target, Eye, Sparkles, Quote } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Quiénes Somos | HTO Chile",
   description:
     "Empresa chilena especializada en mangueras hidráulicas e industriales. Representamos marcas internacionales con asesoría técnica responsable y cobertura nacional.",
 }
-
-const values = [
-  { icon: ShieldCheck, title: "Calidad Certificada", text: "Cumplimos normativas SAE, EN y DIN con marcas internacionales de prestigio." },
-  { icon: TrendingUp, title: "Innovación Continua", text: "Soluciones en caucho, termoplásticos y materiales especiales de última generación." },
-  { icon: HeartHandshake, title: "Cercanía Técnica", text: "Asesoría en terreno y capacitación a equipos de mantención en todo Chile." },
-  { icon: Users, title: "Soporte Especializado", text: "Selección correcta de presión, fluido, radio y temperatura para cada aplicación." },
-]
 
 export default function QuienesSomosPage() {
   return (
@@ -115,33 +108,6 @@ export default function QuienesSomosPage() {
               </p>
             </div>
           </Reveal>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="bg-background py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--brand-2)]">
-              Nuestros Valores
-            </span>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Los principios que guían nuestra operación
-            </h2>
-          </Reveal>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map((v, i) => (
-              <Reveal key={v.title} delay={i * 0.08}>
-                <div className="h-full rounded-2xl border border-border bg-card p-6 text-center shadow-sm transition-shadow hover:shadow-md">
-                  <div className="mx-auto flex size-12 items-center justify-center rounded-xl bg-accent/15 text-[var(--brand)]">
-                    <v.icon className="size-6" />
-                  </div>
-                  <h3 className="mt-4 text-lg font-semibold text-foreground">{v.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.text}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 
