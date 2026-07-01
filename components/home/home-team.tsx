@@ -20,28 +20,32 @@ interface Collaborator {
 
 const collaborators: Collaborator[] = [
   {
-    name: "Patricio Arce",
-    role: "Gerente General",
+    name: "Patricio Ahumada Tabitaud",
+    role: "Director — Gerente de Logística y Operaciones",
     image: "/images/team/placeholder-1.svg",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/patricio-alexander-ahumada-tabitaud-48a34741/",
+  },
+  {
+    name: "Cristian Vilches Rodríguez",
+    role: "Especialista Técnico",
+    image: "/images/team/placeholder-2.svg",
+    linkedin: "https://www.linkedin.com/in/cristian-andres-vilches-rodriguez-a19b44161/",
   },
   {
     name: "Carolina Arce",
-    role: "Gerente Comercial",
-    image: "/images/team/placeholder-2.svg",
-    linkedin: "#",
-  },
-  {
-    name: "Colaborador 3",
-    role: "Cargo",
+    role: "Asesora Comunicacional — Marketing Digital",
     image: "/images/team/placeholder-3.svg",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/carolina-arce-solis/",
   },
   {
-    name: "Colaborador 4",
-    role: "Cargo",
+    name: "Paula Ahumada",
+    role: "Back Office — Ventas",
     image: "/images/team/placeholder-4.svg",
-    linkedin: "#",
+  },
+  {
+    name: "Luis Felipe Chamorro Pinto",
+    role: "Jefe de Bodega",
+    image: "/images/team/placeholder-5.svg",
   },
 ]
 
