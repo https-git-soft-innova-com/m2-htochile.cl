@@ -40,12 +40,12 @@ const collaborators: Collaborator[] = [
   {
     name: "Paula Ahumada",
     role: "Back Office — Ventas",
-    image: "/images/team/placeholder-4.svg",
+    image: "/images/team/paula-ahumada.jpg",
   },
   {
     name: "Luis Felipe Chamorro Pinto",
     role: "Jefe de Bodega",
-    image: "/images/team/placeholder-5.svg",
+    image: "/images/team/luis-chamorro.png",
   },
 ]
 
