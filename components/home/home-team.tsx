@@ -16,6 +16,7 @@ interface Collaborator {
   role: string
   image: string
   linkedin?: string
+  imageClass?: string
 }
 
 const collaborators: Collaborator[] = [
@@ -30,6 +31,7 @@ const collaborators: Collaborator[] = [
     role: "Especialista Técnico",
     image: "/images/team/cristian-vilches.png",
     linkedin: "https://www.linkedin.com/in/cristian-andres-vilches-rodriguez-a19b44161/",
+    imageClass: "scale-95 object-top",
   },
   {
     name: "Carolina Arce",
@@ -46,6 +48,7 @@ const collaborators: Collaborator[] = [
     name: "Luis Felipe Chamorro Pinto",
     role: "Jefe de Bodega",
     image: "/images/team/luis-chamorro.png",
+    imageClass: "scale-95 object-top",
   },
 ]
 
@@ -67,7 +70,7 @@ export function HomeTeam() {
                   <img
                     src={person.image}
                     alt={person.name}
-                    className="size-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+                    className={`size-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105 ${person.imageClass ?? ""}`}
                   />
                 </div>
                 {/* Nombre */}
