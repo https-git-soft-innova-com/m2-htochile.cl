@@ -28,7 +28,7 @@ const collaborators: Collaborator[] = [
   {
     name: "Cristian Vilches Rodríguez",
     role: "Especialista Técnico",
-    image: "/images/team/placeholder-2.svg",
+    image: "/images/team/cristian-vilches.png",
     linkedin: "https://www.linkedin.com/in/cristian-andres-vilches-rodriguez-a19b44161/",
   },
   {
