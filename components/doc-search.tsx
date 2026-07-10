@@ -40,6 +40,9 @@ export function DocSearch({ compact = false }: { compact?: boolean }) {
   const [modalOpen, setModalOpen] = useState(false)
   const [pendingUrl, setPendingUrl] = useState("")
   const [hasAccess, setHasAccess] = useState(false)
+  const [brandsData, setBrandsData] = useState<string[]>([])
+  const [categoriesData, setCategoriesData] = useState<string[]>([])
+  const [typesData, setTypesData] = useState<string[]>([])
 
   useEffect(() => {
     if (typeof window !== "undefined" && localStorage.getItem("hto_bib_access")) {
@@ -48,16 +51,24 @@ export function DocSearch({ compact = false }: { compact?: boolean }) {
   }, [])
 
   useEffect(() => {
-    fetch("/api/docs")
-      .then((r) => r.json())
-      .then((data) => setDocs(Array.isArray(data) ? data : []))
+    const API_URL = "http://161.35.5.30";
+    Promise.all([
+      fetch(`${API_URL}/api/docs`).then(r => r.json()),
+      fetch(`${API_URL}/api/docs/filters`).then(r => r.json()),
+    ])
+      .then(([docsRes, filtersRes]) => {
+        setDocs(Array.isArray(docsRes.docs) ? docsRes.docs : []);
+        if (filtersRes.marcas) setBrandsData(filtersRes.marcas);
+        if (filtersRes.categorias) setCategoriesData(filtersRes.categorias);
+        if (filtersRes.tipos) setTypesData(filtersRes.tipos);
+      })
       .catch(() => setDocs([]))
       .finally(() => setLoading(false))
   }, [])
 
-  const brands = useMemo(() => [...new Set(docs.map((d) => d.brand).filter(Boolean))], [docs])
-  const categories = useMemo(() => [...new Set(docs.map((d) => d.category).filter(Boolean))], [docs])
-  const types = useMemo(() => [...new Set(docs.map((d) => d.type).filter(Boolean))], [docs])
+  const brands = brandsData
+  const categories = categoriesData
+  const types = typesData
 
   const results = useMemo(() => {
     return docs.filter((d) => {
