@@ -28,7 +28,7 @@ Elementos a incorporar de M1 y M3 según reunión con Caro.
 | 2 | Hero - Agregar barra de certificaciones | ✅ Cerrado | PR #17 |
 | 3 | Hero - Cambiar textos slider | ✅ Hecho en #1 | — |
 | 4 | Productos destacados - Reestructurar categorías | ✅ Hecho en #1 | — |
-| 5 | Sección Colaboradores - Nueva sección | ⏳ Pendiente | — |
+| 5 | Sección Colaboradores - Nueva sección | ✅ Cerrado | — |
 | 6 | Modal Biblioteca Técnica - Formulario captura | ✅ Cerrado | PR #18 |
 | 7 | Industrias - Agregar faltantes | ✅ Hecho en #1 | — |
 | 8 | WhatsApp contextual | ⏳ Pendiente | — |
@@ -122,7 +122,58 @@ ISO 9001, DNV, RINA, Lloyd's Register, Bureau Veritas, MSHA, SICEP
 ---
 
 ## Pendientes para mañana
-1. **#5** — Sección Colaboradores (placeholders foto+cargo)
-2. **#8** — WhatsApp contextual (mensaje según página)
-3. **#11** — Blog subsitio con EM-DASH (MCP)
-4. **#12-#15** — Bloqueados por contenido de Caro
+1. **#11** — Blog subsitio con EM-DASH (MCP)
+2. **#12-#15** — Bloqueados por contenido de Caro
+
+---
+
+## Infraestructura desplegada
+
+### Droplet DigitalOcean (161.35.5.30)
+- Ubuntu 24.04 hardened (SSH key only, UFW 22/80/443, Fail2Ban)
+- Node.js 22 + Nginx reverse proxy (rate limit 30r/s)
+- API Docs: `/api/docs`, `/api/docs/filters`, `/api/docs/download`, `/api/leads`
+- SQLite: tablas `documentos` (60 PDFs indexados) + `leads` (captura formulario)
+- Cron cada 2h: indexa bucket DO Spaces → SQLite
+- Systemd service: auto-restart, enabled on boot
+- Dominio pendiente: `api.docs.htochile.cl` (esperando Cloudflare/NIC.cl)
+
+### DigitalOcean Spaces
+- Bucket: `docs-hto-chile` (sfo3)
+- 60 PDFs PRENSSO subidos y organizados por carpetas
+- Acceso privado — descargas via proxy del Droplet
+
+### EmailJS
+- Service: `service_6dqm8o9`
+- Template biblioteca: `template_57cl8wb`
+- Template contacto: `template_cq8aj7j`
+- Destinatario dev: felipe.ahumada@soft-innova.com
+- Destinatario prod: patricio.ahumada@htochile.cl
+
+---
+
+## Registro de cambios (continuación)
+
+### Sesión 2026-06-24 — Certificaciones + Quiénes Somos
+- Logos reales certificaciones (9 logos desde htochile.cl)
+- Eliminar sección Valores de Quiénes Somos (alinear con M3)
+- Deploy a Vercel (primer deploy manual con CLI)
+
+### Sesión 2026-06-30 — Colaboradores
+- Sección Colaboradores con efecto grayscale → color al hover
+- 5 colaboradores con fotos reales + LinkedIn
+- Ubicada entre Productos y Biblioteca Técnica
+
+### Sesión 2026-07-09/10 — Droplet + API Docs
+- Hardening completo del Droplet
+- API Node.js + SQLite + Cron Spaces
+- 60 PDFs subidos al bucket e indexados
+- Smoke tests 7/7 PASS
+- OWASP security tests 6/6 PASS
+
+### Sesión 2026-07-12 — Biblioteca funcional
+- Buscador sin dropdowns (solo texto libre)
+- Paginador 10 por página
+- Formulario siempre aparece (captura leads)
+- Leads en BD + email via EmailJS
+- Descarga via proxy (sin bucket público)
