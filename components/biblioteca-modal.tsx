@@ -11,6 +11,7 @@ interface BibliotecaModalProps {
   open: boolean
   onClose: () => void
   onSubmit: (data: BibliotecaFormData) => void
+  loading?: boolean
 }
 
 export interface BibliotecaFormData {
@@ -21,7 +22,7 @@ export interface BibliotecaFormData {
   aceptaLey: boolean
 }
 
-export function BibliotecaModal({ open, onClose, onSubmit }: BibliotecaModalProps) {
+export function BibliotecaModal({ open, onClose, onSubmit, loading = false }: BibliotecaModalProps) {
   const [form, setForm] = useState<BibliotecaFormData>({
     nombre: "",
     empresa: "",
@@ -148,10 +149,10 @@ export function BibliotecaModal({ open, onClose, onSubmit }: BibliotecaModalProp
                 <div className="flex gap-3 pt-2">
                   <Button
                     type="submit"
-                    disabled={!isValid}
+                    disabled={!isValid || loading}
                     className="flex-1 bg-[var(--brand)] text-white hover:bg-[var(--brand-2)]"
                   >
-                    Enviar
+                    {loading ? "Enviando..." : "Enviar"}
                   </Button>
                   <Button
                     type="button"
