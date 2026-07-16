@@ -224,3 +224,29 @@ ISO 9001, DNV, RINA, Lloyd's Register, Bureau Veritas, MSHA, SICEP
   3. `doc_download` — key del documento descargado
 - Build exitoso
 - GTM configuración pendiente: crear activadores + etiquetas en panel de Google
+
+### Cierre de sesión 2026-07-16 — STOP hasta dominio
+- PR #21 creado: feature/productos-industrias-seo → main
+- Commit: b7f3e32 (38 archivos, +644/-74)
+- **EN PAUSA hasta tener dominio htochile.cl (NIC.cl traspaso en curso)**
+
+## Pendientes bloqueados por dominio NIC.cl
+
+| Tarea | Requiere |
+|-------|----------|
+| Verificar Google Search Console | DNS htochile.cl activo |
+| Configurar activadores/etiquetas GTM | Sitio en producción con dominio |
+| Blog EM-DASH (#11) | Dominio + decisión arquitectura |
+| Hero imágenes (#12) | Fotos de Caro (opcional) |
+| Keywords research con MCP Analytics | GA4 acumulando datos (ago-sep) |
+| SEO avanzado + agente marketing | Post-dominio |
+
+## Próxima sesión (cuando haya dominio)
+1. Merge PR #21 → main → deploy Vercel
+2. Conectar dominio htochile.cl en Vercel
+3. Verificar Search Console con DNS TXT
+4. Submit sitemap.xml
+5. Configurar activadores/etiquetas en GTM panel
+6. Publicar contenedor GTM
+7. Validar que GA4 recibe eventos
+8. Blog EM-DASH (#11)
