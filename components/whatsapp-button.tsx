@@ -5,6 +5,12 @@ import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "motion/react"
 import { whatsappUrl } from "@/lib/site-data"
 
+declare global {
+  interface Window {
+    dataLayer: Record<string, unknown>[]
+  }
+}
+
 const rotatingLabels = [
   "Contactar un Agente",
   "Solicitar Asesoría Técnica",
@@ -25,6 +31,16 @@ function contextMessage(pathname: string) {
   return "Hola, necesito información sobre HTO."
 }
 
+function sectionFromPath(pathname: string) {
+  if (pathname.startsWith("/productos")) return "productos"
+  if (pathname.startsWith("/industrias")) return "industrias"
+  if (pathname.startsWith("/biblioteca-tecnica")) return "biblioteca-tecnica"
+  if (pathname.startsWith("/blog")) return "blog"
+  if (pathname.startsWith("/quienes-somos")) return "quienes-somos"
+  if (pathname.startsWith("/contacto")) return "contacto"
+  return "home"
+}
+
 export function WhatsappButton() {
   const pathname = usePathname()
   const [index, setIndex] = useState(0)
@@ -42,12 +58,22 @@ export function WhatsappButton() {
     }
   }, [])
 
+  function handleClick() {
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: "whatsapp_click",
+      whatsapp_section: sectionFromPath(pathname),
+      whatsapp_page: pathname,
+    })
+  }
+
   return (
     <a
       href={whatsappUrl(contextMessage(pathname))}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
+      onClick={handleClick}
       className="group fixed bottom-5 right-5 z-50 flex items-center gap-3 rounded-full bg-[#25D366] py-2.5 pl-2.5 pr-3 text-white shadow-lg shadow-black/20 transition-transform hover:scale-105 sm:bottom-6 sm:right-6"
     >
       <span className="relative flex size-11 items-center justify-center rounded-full bg-white/15">

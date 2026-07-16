@@ -31,14 +31,14 @@ Elementos a incorporar de M1 y M3 según reunión con Caro.
 | 5 | Sección Colaboradores - Nueva sección | ✅ Cerrado | — |
 | 6 | Modal Biblioteca Técnica - Formulario captura | ✅ Cerrado | PR #18 |
 | 7 | Industrias - Agregar faltantes | ✅ Hecho en #1 | — |
-| 8 | WhatsApp contextual | ⏳ Pendiente | — |
+| 8 | WhatsApp contextual | ✅ Cerrado | — |
 | 9 | Quiénes Somos - Estilo M3 | ✅ Cerrado | PR #20 |
 | 10 | Marcas que representamos - Barra logos | ✅ Cerrado | PR #19 |
 | 11 | Blog - Subsitio con EM-DASH (MCP) | ⏳ Pendiente | — |
 | 12 | Imágenes Hero - Reemplazo | 🚫 Bloqueado (Caro) | — |
-| 13 | Productos - Contenido real | 🚫 Bloqueado (Caro) | — |
-| 14 | Fichas técnicas - Links OneDrive | 🚫 Bloqueado (Caro) | — |
-| 15 | Colaboradores - Fotos y cargos reales | 🚫 Bloqueado (Caro) | — |
+| 13 | Productos - Contenido real | ✅ Cerrado | — |
+| 14 | Fichas técnicas - Links OneDrive | ✅ Cerrado | — |
+| 15 | Colaboradores - Fotos y cargos reales | ✅ Cerrado | — |
 
 ## Datos reales HTO Chile (fuente: htochile.cl actual + M1 + M3)
 
@@ -177,3 +177,50 @@ ISO 9001, DNV, RINA, Lloyd's Register, Bureau Veritas, MSHA, SICEP
 - Formulario siempre aparece (captura leads)
 - Leads en BD + email via EmailJS
 - Descarga via proxy (sin bucket público)
+
+### Sesión 2026-07-15 — Productos PRENSSO reales + Imágenes Industrias
+- Issue #13 cerrado: Contenido real de productos integrado
+- 12 industrias con imágenes reales de HTO Chile (PNG → JPG optimizado 80-164KB)
+- 22 productos en site-data.ts:
+  - 4 productos mangueras/conexiones (existentes)
+  - 6 prensas hidráulicas PRENSSO (PHV65TFP, PM30, MM40, MP10T, MP6TS, PHV110TFP)
+  - 3 cortadoras (MC300, MC3002 neumática, MC4000)
+  - 2 peladoras (MD3003, MMD1000 manual)
+  - 1 insertadora (MMT200)
+  - 6 maquinaria auxiliar (PSC60, PDC80, MCE60, PDV1000-D, MLLTS300, BTM700)
+- 21 fichas técnicas en techDocs
+- Imágenes de productos optimizadas a 600px/80% quality (20-52KB)
+- Nuevas industrias agregadas: Automotriz, Naval, Transporte, Manufactura
+- Build Next.js exitoso
+- Pendientes para cerrar v1: #8 WhatsApp contextual, #11 Blog EM-DASH, #12 Hero (confirmar), SEO técnico
+
+### Sesión 2026-07-16 — Cierre #8 + RRSS Footer
+- Issue #8 cerrado: WhatsApp contextual ya funcionaba correctamente
+- Footer actualizado: eliminados X (Twitter) y YouTube
+- RRSS reales integradas con URLs:
+  - Instagram: https://www.instagram.com/hto.chile/
+  - LinkedIn: https://www.linkedin.com/company/hto-chile/
+- Links abren en nueva pestaña (target="_blank")
+- Build exitoso
+- Pendientes: #11 Blog EM-DASH, #12 Hero (por confirmar), sitemap+robots+GA4+GTM (esperando IDs)
+
+### Sesión 2026-07-16 (cont.) — GTM + GA4 + SEO técnico
+- Google Tag Manager GTM-NM2T3545 integrado (head script + body noscript)
+- Google Analytics 4: G-3H2VB5DJL3 (se activa via GTM)
+- Metadata SEO corregida: título, description, keywords relevantes a mangueras/PRENSSO
+- Open Graph + Twitter Card configurados
+- canonical URL: https://htochile.cl
+- sitemap.xml dinámico: 41 URLs (7 estáticas + 12 industrias + 22 productos)
+- robots.txt: permite todo, bloquea /api/ y /_next/
+- Build exitoso con rutas /sitemap.xml y /robots.txt generadas
+- Pendiente: verificación Search Console (requiere DNS htochile.cl activo)
+- Pendiente: configurar activadores y etiquetas en GTM (GA4 pageview + eventos)
+- Pendiente NIC.cl: traspaso DNS en curso (~5 días hábiles desde semana pasada)
+
+### Sesión 2026-07-16 (cont. 2) — DataLayer eventos GTM
+- Eventos dataLayer implementados en el código:
+  1. `whatsapp_click` — sección + página de origen
+  2. `lead_form_submit` — empresa + documento solicitado
+  3. `doc_download` — key del documento descargado
+- Build exitoso
+- GTM configuración pendiente: crear activadores + etiquetas en panel de Google

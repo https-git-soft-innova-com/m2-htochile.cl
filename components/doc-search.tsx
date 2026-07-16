@@ -123,10 +123,26 @@ export function DocSearch({ compact = false }: { compact?: boolean }) {
     } catch (e) {
       console.error("Error:", e)
     }
+
+    // GTM: lead form submit event
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push({
+      event: "lead_form_submit",
+      lead_source: "biblioteca_tecnica",
+      lead_empresa: data.empresa,
+      lead_documento: pendingUrl,
+    })
+
     setModalOpen(false)
     setDownloading(false)
     // 3. Descargar el documento
     if (pendingUrl) {
+      // GTM: document download event
+      window.dataLayer = window.dataLayer || []
+      window.dataLayer.push({
+        event: "doc_download",
+        doc_key: pendingUrl,
+      })
       window.open(`http://161.35.5.30/api/docs/download?key=${encodeURIComponent(pendingUrl)}`, "_blank")
       setPendingUrl("")
     }
