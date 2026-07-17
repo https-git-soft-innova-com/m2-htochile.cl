@@ -3,18 +3,17 @@ import Image from "next/image"
 
 export default function MaintenancePage() {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
-      {/* Imagen de fondo */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-industrial.jpg"
-          alt="Operaciones industriales HTO Chile"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/65" />
-      </div>
+    <section className="relative flex h-screen w-screen items-center justify-center overflow-hidden">
+      {/* Imagen de fondo 100% viewport */}
+      <Image
+        src="/images/hero-hydraulic-2.jpg"
+        alt="Mangueras hidráulicas industriales - HTO Chile"
+        fill
+        className="object-cover"
+        priority
+        sizes="100vw"
+      />
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* Contenido */}
       <div className="relative z-10 mx-auto max-w-xl space-y-8 px-6 text-center">
