@@ -6,7 +6,7 @@ export default function MaintenancePage() {
     <section className="relative flex h-screen w-screen items-center justify-center overflow-hidden">
       {/* Imagen de fondo 100% viewport */}
       <Image
-        src="/images/hero-hydraulic-2.jpg"
+        src="/images/hero-mining-hoses.jpg"
         alt="Mangueras hidráulicas industriales - HTO Chile"
         fill
         className="object-cover"
