@@ -4,9 +4,10 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
-import { WhatsappButton } from "@/components/whatsapp-button"
+// TEMPORAL: Header/Footer/WhatsApp desactivados durante página de construcción
+// import { SiteHeader } from "@/components/site-header"
+// import { SiteFooter } from "@/components/site-footer"
+// import { WhatsappButton } from "@/components/whatsapp-button"
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] })
 const geistMono = Geist_Mono({
@@ -116,10 +117,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <SiteHeader />
+        {/* TEMPORAL: Solo main sin header/footer/whatsapp durante construcción */}
         <main>{children}</main>
-        <SiteFooter />
-        <WhatsappButton />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
