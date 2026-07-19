@@ -230,23 +230,164 @@ ISO 9001, DNV, RINA, Lloyd's Register, Bureau Veritas, MSHA, SICEP
 - Commit: b7f3e32 (38 archivos, +644/-74)
 - **EN PAUSA hasta tener dominio htochile.cl (NIC.cl traspaso en curso)**
 
-## Pendientes bloqueados por dominio NIC.cl
+## Pendientes bloqueados por dominio NIC.cl — ✅ RESUELTOS (2026-07-17)
 
-| Tarea | Requiere |
-|-------|----------|
-| Verificar Google Search Console | DNS htochile.cl activo |
-| Configurar activadores/etiquetas GTM | Sitio en producción con dominio |
-| Blog EM-DASH (#11) | Dominio + decisión arquitectura |
-| Hero imágenes (#12) | Fotos de Caro (opcional) |
-| Keywords research con MCP Analytics | GA4 acumulando datos (ago-sep) |
-| SEO avanzado + agente marketing | Post-dominio |
+Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 
-## Próxima sesión (cuando haya dominio)
-1. Merge PR #21 → main → deploy Vercel
-2. Conectar dominio htochile.cl en Vercel
-3. Verificar Search Console con DNS TXT
-4. Submit sitemap.xml
-5. Configurar activadores/etiquetas en GTM panel
-6. Publicar contenedor GTM
-7. Validar que GA4 recibe eventos
-8. Blog EM-DASH (#11)
+---
+
+## Sesión 2026-07-17/18 — Migración completa htochile.cl
+
+### Resumen ejecutivo
+- PR #21 mergeado → main (38 archivos, +670 líneas)
+- Dominio htochile.cl en Cloudflare (NS cambiados en NIC.cl)
+- Página "Sitio en mantenimiento" desplegada en Vercel
+- Blog EM-DASH creado y desplegado en Cloudflare Workers
+- 6 artículos migrados del blog anterior
+- SSL configurado en Droplet para api.docs.htochile.cl
+- QA Report generado (Score 7.5/10)
+- SEO Audit generado (Score 8/10)
+- Guía de migración WordPress → EM-DASH creada
+
+### DNS Cloudflare configurado
+
+| Type | Name | Target | Proxy |
+|------|------|--------|-------|
+| CNAME | @ | cname.vercel-dns.com | DNS only |
+| CNAME | www | cname.vercel-dns.com | DNS only |
+| A | api.docs | 161.35.5.30 | Proxied |
+| MX | @ | htochile-cl.mail.protection.outlook.com | DNS only |
+| TXT | @ | v=spf1 include:spf.protection.outlook.com -all | DNS only |
+| TXT | default._domainkey | DKIM key | DNS only |
+| TXT | _dmarc | v=DMARC1; p=none; | DNS only |
+
+### Blog EM-DASH (Cloudflare Workers)
+
+- **URL Worker:** https://htochile-blog.htochile.workers.dev
+- **Custom domain pendiente:** blog.htochile.cl (eliminar CNAME viejo primero)
+- **Cuenta CF:** htochilecl@gmail.com (d1361f54a94074823119c3eccfbb0f17)
+- **D1 Database:** htochile-blog-db (ID: b6c7c96a-b922-4b27-98c1-d16cb628a83b)
+- **KV Session:** 0bdae78de8814a93bef9a6d78bac467a
+- **Workers subdomain:** htochile.workers.dev
+- **API Token:** [almacenado en .env local — no commitear]
+- **R2 Access Key ID:** [almacenado en .env local — no commitear]
+- **R2 Access Key Secret:** [almacenado en .env local — no commitear]
+- **S3 Endpoint:** https://d1361f54a94074823119c3eccfbb0f17.r2.cloudflarestorage.com
+- **Proyecto local:** /Volumes/ICOV/Proyectos/htochile-blog
+- **6 posts published:**
+  1. como-seleccionar-manguera-hidraulica (Hidráulica)
+  2. pvc-vs-caucho-manguera-industrial (Industrial)
+  3. reduccion-fallas-flota-minera (Casos de Éxito)
+  4. prensado-correcto-mangueras (Maquinaria)
+  5. normativas-sae-en-din-mangueras (Normativas)
+  6. almacenamiento-mangueras-industriales (Industrial)
+- **Estado:** ✅ Funcional con branding HTO Chile
+
+### SSL Droplet (api.docs.htochile.cl)
+
+- Certificado self-signed generado: /etc/ssl/certs/cloudflare-origin.pem
+- Nginx escucha en 443 + redirige 80→443
+- Puerto 443 abierto en UFW
+- TLS 1.3 + AES-256-GCM
+- HSTS configurado (31536000s includeSubDomains)
+- **Pendiente:** Cambiar SSL mode a "Full" en Cloudflare para que el proxy funcione
+
+### Página mantenimiento (temporal)
+
+- Layout sin header/footer/WhatsApp
+- Imagen: hero-mining-hoses.jpg (mangueras hidráulicas en faena)
+- Logo naranja HTO
+- 100% viewport responsive
+- Contacto: Patricio Ahumada, patricio.ahumada@htochile.cl, +56 9 7724 1488
+- Respaldo landing completa: app/page.full.tsx
+
+### Informes generados
+
+- **QA Report:** /Volumes/ICOV/Proyectos/htochile-m2/QA-REPORT.md (Score 7.5/10)
+- **SEO Audit:** /Volumes/ICOV/Proyectos/htochile-m2/SEO-AUDIT.md (Score 8/10)
+- **Guía Migración:** /Volumes/ICOV/Proyectos/htochile-blog/MIGRATION-GUIDE.md
+
+### QA — Issues encontrados
+
+| Severidad | Issue | Acción |
+|-----------|-------|--------|
+| Media | Security headers faltantes en Vercel | Agregar en next.config.js |
+| Media | Nginx version expuesta | `server_tokens off;` |
+| Baja | No CSP en ningún servicio | Configurar post-lanzamiento |
+
+### SEO — Pendientes post-lanzamiento
+
+1. Verificar Google Search Console (agregar TXT record)
+2. Submit sitemap.xml
+3. Activar GTM (crear activadores + etiquetas en panel)
+4. Agregar structured data (Organization, LocalBusiness, Product)
+5. Keywords research con GA4 data (mes 2)
+
+---
+
+## Pendientes para próxima sesión
+
+| Tarea | Prioridad | Bloqueado por |
+|-------|-----------|---------------|
+| Cambiar SSL mode a Full en Cloudflare | Alta | Felipe (panel CF) |
+| Agregar CNAME @ en Cloudflare (si no está) | Alta | Felipe (panel CF) |
+| Agregar dominio htochile.cl en panel Vercel | Alta | Felipe (panel Vercel) |
+| Fix blog frontend (body vacío) | Alta | Debugging páginas Astro |
+| Agregar security headers en next.config.js | Media | — |
+| Ocultar nginx version | Media | — |
+| Configurar blog.htochile.cl en DNS | Media | Felipe: agregar CNAME blog → htochile-blog.fahumada-d15.workers.dev (Proxied) |
+| Restaurar landing completa (page.full.tsx → page.tsx) | Alta | Cuando se decida lanzar |
+| Verificar Search Console | Media | DNS activo + dominio verificado |
+| Configurar GTM activadores | Media | Sitio en producción |
+| Hero imágenes (#12) | Baja | Fotos de Caro |
+| Structured data | Baja | Post-lanzamiento |
+
+### Sesión 2026-07-18 (continuación) — Blog funcional + Security + DNS
+
+- Blog EM-DASH: branding HTO Chile aplicado (logo, header, footer, GTM, links)
+- Blog funciona en: https://htochile-blog.fahumada-d15.workers.dev
+- Custom domain configurado: blog.htochile.cl (requiere CNAME en Cloudflare)
+- Security headers agregados en Next.js (X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy)
+- Nginx: server_tokens off (ya no expone versión)
+- Commit: e45dc9c (security headers)
+
+### 🚀 LANZAMIENTO — 2026-07-18 19:45 CLT
+
+- **Commit:** e98297e — Landing completa restaurada
+- **URL activa:** https://www.htochile.cl ✅
+- **Deploy:** Vercel producción
+- **Contenido:** Landing completa con Hero, Marcas, Benefits, Industrias, Productos, Equipo, Biblioteca, Blog, CTA, Footer
+- **Funcional:** WhatsApp contextual, GTM, GA4 (via GTM), sitemap.xml, robots.txt
+
+### Pendiente de Felipe en Cloudflare
+
+1. ~~SSL/TLS → Full~~ ✅ Hecho
+2. **DNS → CNAME `@` → `cname.vercel-dns.com` (DNS only)** — para que htochile.cl sin www funcione
+3. ~~Blog: Verificar cuenta CF~~ ✅ Resuelto - cuenta htochilecl@gmail.com
+4. **api.docs:** Certificado SSL edge pendiente de emisión por Cloudflare (puede tomar hasta 24h)
+5. **R2:** Aceptar TOS en https://dash.cloudflare.com/d1361f54a94074823119c3eccfbb0f17/r2
+
+### Sesión 2026-07-19 — Blog contenido real + imágenes
+
+- 9 artículos reales migrados de WordPress (cPanel v2networks → CSV → markdown → EM-DASH CLI)
+- 12 imágenes del blog original copiadas y sirviendo como static assets
+- Artículos con imágenes embebidas en el contenido
+- Footer del blog simplificado (minimalista, diferente a la landing)
+- CTAs corregidos: WhatsApp HTO + Biblioteca Técnica (sin Annie-AI)
+- Colores accent: #E07020 (naranja HTO)
+- Blog 100% funcional en blog.htochile.cl
+- Cuenta Cloudflare correcta: htochilecl@gmail.com
+
+### Artículos del blog (contenido real de HTO Chile)
+
+| # | Slug | Título | Fecha original |
+|---|------|--------|----------------|
+| 1 | despacho-tecnico-perforacion | Despacho técnico para perforación industrial | 2026-02-12 |
+| 2 | maquinaria-prensso | Refuerza capacidad técnica con maquinaria PRENSSO | 2026-02-12 |
+| 3 | alianza-inaflex | Relación estratégica con Inaflex | 2026-02-12 |
+| 4 | armado-hidraulico-mmt200 | Línea de armado hidráulico con MMT200 | 2026-02-12 |
+| 5 | gestion-manguera-pvc-internacional | Gestión internacional manguera PVC | 2026-02-19 |
+| 6 | mangueras-gran-diametro-mineria | Logística mangueras gran diámetro minería | 2026-02-26 |
+| 7 | visita-forceline-brasil | Visita Forceline en Brasil | 2026-03-13 |
+| 8 | almacenamiento-mangueras | Almacenamiento correcto de mangueras | 2026-03-24 |
+| 9 | hto-chile-recorre-el-pais | Recorre el país con Prensso Maquinarias | 2026-03-27 |
