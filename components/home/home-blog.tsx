@@ -24,7 +24,7 @@ export function HomeBlog() {
         </div>
         <div className="mt-10 text-center">
           <Button asChild variant="outline" size="lg" className="gap-2">
-            <Link href="/blog">
+            <Link href="https://blog.htochile.cl">
               Ver todos los artículos
               <ArrowRight className="size-4" />
             </Link>

@@ -53,8 +53,8 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-2.5 text-sm text-white/70">
               <li><Link href="/quienes-somos" className="hover:text-accent">Quiénes Somos</Link></li>
               <li><Link href="/biblioteca-tecnica" className="hover:text-accent">Biblioteca Técnica</Link></li>
-              <li><Link href="/blog" className="hover:text-accent">Blog</Link></li>
-              <li><Link href="/contacto" className="hover:text-accent">Contacto</Link></li>
+              <li><Link href="https://blog.htochile.cl" className="hover:text-accent">Blog</Link></li>
+              <li><Link href="/#contacto" className="hover:text-accent">Contacto</Link></li>
             </ul>
           </div>
 
@@ -97,7 +97,7 @@ export function SiteFooter() {
             <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-sm text-white/70">
               {productCategories.slice(0, 4).map((c) => (
                 <li key={c}>
-                  <Link href="/productos" className="hover:text-accent">{c}</Link>
+                  <Link href="/#productos" className="hover:text-accent">{c}</Link>
                 </li>
               ))}
             </ul>

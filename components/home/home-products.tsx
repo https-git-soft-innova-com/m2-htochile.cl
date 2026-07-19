@@ -15,7 +15,7 @@ export function HomeProducts() {
   }
 
   return (
-    <section className="bg-background py-20 lg:py-24">
+    <section id="productos" className="bg-background py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-2xl">
@@ -63,7 +63,7 @@ export function HomeProducts() {
 
         <div className="mt-8 text-center">
           <Button asChild variant="outline" size="lg" className="gap-2">
-            <Link href="/productos">
+            <Link href="/#productos">
               Ver catálogo completo
               <ArrowRight className="size-4" />
             </Link>

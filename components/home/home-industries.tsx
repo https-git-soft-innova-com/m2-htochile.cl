@@ -7,7 +7,7 @@ import { industries } from "@/lib/site-data"
 
 export function HomeIndustries() {
   return (
-    <section className="bg-secondary/50 py-20 lg:py-24">
+    <section id="industrias" className="bg-secondary/50 py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Industrias"

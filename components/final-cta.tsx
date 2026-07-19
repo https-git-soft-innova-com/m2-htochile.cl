@@ -5,7 +5,7 @@ import { whatsappUrl } from "@/lib/site-data"
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden" style={{ backgroundColor: "var(--brand)" }}>
+    <section id="contacto" className="relative overflow-hidden" style={{ backgroundColor: "var(--brand)" }}>
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{ backgroundImage: "url('/images/cta-bg.png')" }}
@@ -22,7 +22,7 @@ export function FinalCta() {
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button asChild size="lg" className="gap-2 bg-accent text-white hover:bg-accent/90">
-            <Link href="/contacto">
+            <Link href="/#contacto">
               <FileText className="size-4" />
               Solicitar Cotización
             </Link>

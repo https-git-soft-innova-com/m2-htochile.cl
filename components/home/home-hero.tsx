@@ -83,7 +83,7 @@ export function HomeHero() {
             className="mt-8 flex flex-col gap-3 sm:flex-row"
           >
             <Button asChild size="lg" className="gap-2 bg-accent text-white hover:bg-accent/90">
-              <Link href="/contacto">
+              <Link href="/#contacto">
                 <FileText className="size-4" />
                 Solicitar Cotización
               </Link>

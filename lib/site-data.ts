@@ -7,11 +7,11 @@ export function whatsappUrl(message: string) {
 export const nav = [
   { label: "Inicio", href: "/" },
   { label: "Quiénes Somos", href: "/quienes-somos" },
-  { label: "Industrias", href: "/industrias" },
-  { label: "Productos", href: "/productos" },
+  { label: "Industrias", href: "/#industrias" },
+  { label: "Productos", href: "/#productos" },
   { label: "Biblioteca Técnica", href: "/biblioteca-tecnica" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contacto", href: "/contacto" },
+  { label: "Blog", href: "https://blog.htochile.cl" },
+  { label: "Contacto", href: "/#contacto" },
 ]
 
 export const heroSlides = [
@@ -734,63 +734,33 @@ export const blogCategories = ["Hidráulica", "Industrial", "Casos de Éxito", "
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "como-seleccionar-manguera-hidraulica",
-    title: "Cómo seleccionar correctamente una manguera hidráulica de alta presión",
-    category: "Hidráulica",
-    excerpt:
-      "Presión de trabajo, radio mínimo de curvatura, compatibilidad de fluido y temperatura: los 4 factores clave.",
-    image: "/images/blog-1.png",
-    date: "12 Jun 2026",
-    readTime: "6 min",
-  },
-  {
-    slug: "pvc-vs-caucho-manguera-industrial",
-    title: "PVC vs caucho: qué manguera industrial conviene en cada faena",
-    category: "Industrial",
-    excerpt:
-      "Diferencias en abrasión, temperatura y costo total de operación para elegir correctamente.",
-    image: "/images/blog-2.png",
-    date: "28 May 2026",
-    readTime: "8 min",
-  },
-  {
-    slug: "reduccion-fallas-flota-minera",
-    title: "Reducción de fallas en flota minera con mangueras certificadas SAE 100 R15",
-    category: "Casos de Éxito",
-    excerpt:
-      "Cambio del programa de mantención preventiva redujo paradas no programadas en un 40%.",
-    image: "/images/blog-3.png",
-    date: "15 May 2026",
-    readTime: "5 min",
-  },
-  {
-    slug: "prensado-correcto-mangueras",
-    title: "Guía de prensado correcto de mangueras hidráulicas",
+    slug: "maquinaria-prensso",
+    title: "HTO Chile refuerza su capacidad técnica con maquinaria PRENSSO",
     category: "Maquinaria",
     excerpt:
-      "Parámetros de prensado, diámetros de dado y verificación de ensamblaje seguro.",
-    image: "/images/industries/mineria.jpg",
-    date: "2 May 2026",
-    readTime: "7 min",
-  },
-  {
-    slug: "normativas-sae-en-din-mangueras",
-    title: "Normativas SAE, EN y DIN: qué exige cada estándar en mangueras",
-    category: "Normativas",
-    excerpt:
-      "Guía comparativa de los estándares internacionales para selección y certificación.",
-    image: "/images/industries/quimica.jpg",
-    date: "20 Abr 2026",
-    readTime: "9 min",
-  },
-  {
-    slug: "almacenamiento-mangueras-industriales",
-    title: "Cómo almacenar mangueras industriales correctamente",
-    category: "Industrial",
-    excerpt:
-      "Evite degradación prematura con estas prácticas de almacenamiento y manipulación.",
+      "Incorporación de equipos PRENSSO para fortalecer capacidad técnica en sistemas hidráulicos.",
     image: "/images/industries/manufactura.jpg",
-    date: "8 Abr 2026",
-    readTime: "6 min",
+    date: "12 Feb 2026",
+    readTime: "3 min",
+  },
+  {
+    slug: "visita-forceline-brasil",
+    title: "HTO Chile visita Forceline en Brasil para fortalecer alianzas industriales",
+    category: "Alianzas",
+    excerpt:
+      "Visita a Forceline en Brasil para conocer su operación y fortalecer nuevas alianzas industriales.",
+    image: "/images/industries/forestal.jpg",
+    date: "13 Mar 2026",
+    readTime: "4 min",
+  },
+  {
+    slug: "mangueras-gran-diametro-mineria",
+    title: "Logística Especializada en Mangueras de Gran Diámetro para Minería",
+    category: "Minería",
+    excerpt:
+      "Soluciones logísticas para mangueras industriales de gran diámetro en operaciones mineras de Chile.",
+    image: "/images/industries/mineria.jpg",
+    date: "26 Feb 2026",
+    readTime: "4 min",
   },
 ]
