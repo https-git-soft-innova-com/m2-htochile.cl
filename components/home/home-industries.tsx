@@ -19,7 +19,7 @@ export function HomeIndustries() {
           {industries.map((ind, i) => (
             <Reveal key={ind.slug} delay={(i % 4) * 0.06}>
               <Link
-                href={`/industrias/${ind.slug}`}
+                href={`https://wa.me/56942073252?text=Hola%2C%20necesito%20información%20sobre%20soluciones%20para%20${encodeURIComponent(ind.name)}`}
                 className="group relative block h-72 overflow-hidden rounded-xl"
               >
                 <Image

@@ -65,7 +65,7 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-2.5 text-sm text-white/70">
               {industries.slice(0, 6).map((ind) => (
                 <li key={ind.slug}>
-                  <Link href={`/industrias/${ind.slug}`} className="hover:text-accent">
+                  <Link href="/#industrias" className="hover:text-accent">
                     {ind.name}
                   </Link>
                 </li>
