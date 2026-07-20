@@ -63,7 +63,7 @@ export function HomeProducts() {
 
         <div className="mt-8 text-center">
           <Button asChild variant="outline" size="lg" className="gap-2">
-            <Link href="/#productos">
+            <Link href="/productos">
               Ver catálogo completo
               <ArrowRight className="size-4" />
             </Link>

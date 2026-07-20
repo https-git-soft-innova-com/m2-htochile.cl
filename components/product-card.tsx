@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Image from "next/image"
 import { FileText, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -7,7 +8,7 @@ import { type Product, whatsappUrl } from "@/lib/site-data"
 export function ProductCard({ product }: { product: Product }) {
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/40 hover:shadow-lg hover:shadow-[var(--brand)]/5">
-      <div className="relative aspect-4/3 overflow-hidden bg-secondary/60">
+      <Link href={`/productos/${product.slug}`} className="relative aspect-4/3 overflow-hidden bg-secondary/60">
         <Image
           src={product.image || "/placeholder.svg"}
           alt={product.name}
@@ -18,14 +19,16 @@ export function ProductCard({ product }: { product: Product }) {
         <Badge className="absolute left-3 top-3 bg-[var(--brand)] text-white hover:bg-[var(--brand)]">
           {product.category}
         </Badge>
-      </div>
+      </Link>
       <div className="flex flex-1 flex-col p-5">
         <p className="text-xs font-medium uppercase tracking-wider text-[var(--brand-2)]">
           {product.brand}
         </p>
-        <h3 className="mt-1.5 text-base font-semibold leading-snug text-foreground">
-          {product.name}
-        </h3>
+        <Link href={`/productos/${product.slug}`}>
+          <h3 className="mt-1.5 text-base font-semibold leading-snug text-foreground hover:text-accent transition-colors">
+            {product.name}
+          </h3>
+        </Link>
         <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
           {product.short}
         </p>
@@ -41,10 +44,10 @@ export function ProductCard({ product }: { product: Product }) {
             </a>
           </Button>
           <Button asChild size="sm" variant="outline" className="w-full gap-2">
-            <a href="#" rel="noopener noreferrer">
+            <Link href={`/productos/${product.slug}`}>
               <FileText className="size-4" />
               Ficha Técnica
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
