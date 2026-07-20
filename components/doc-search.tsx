@@ -49,7 +49,7 @@ export function DocSearch({ compact = false }: { compact?: boolean }) {
   }, [])
 
   useEffect(() => {
-    const API_URL = "http://161.35.5.30";
+    const API_URL = "https://161.35.5.30";
     fetch(`${API_URL}/api/docs?limit=100`)
       .then(r => r.json())
       .then((docsRes) => {
@@ -98,7 +98,7 @@ export function DocSearch({ compact = false }: { compact?: boolean }) {
     setDownloading(true)
     try {
       // 1. Guardar lead en BD del Droplet
-      await fetch("http://161.35.5.30/api/leads", {
+      await fetch("https://161.35.5.30/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -143,7 +143,7 @@ export function DocSearch({ compact = false }: { compact?: boolean }) {
         event: "doc_download",
         doc_key: pendingUrl,
       })
-      window.open(`http://161.35.5.30/api/docs/download?key=${encodeURIComponent(pendingUrl)}`, "_blank")
+      window.open(`https://161.35.5.30/api/docs/download?key=${encodeURIComponent(pendingUrl)}`, "_blank")
       setPendingUrl("")
     }
   }
