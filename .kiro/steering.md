@@ -367,16 +367,31 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 4. **api.docs:** Certificado SSL edge pendiente de emisión por Cloudflare (puede tomar hasta 24h)
 5. **R2:** Aceptar TOS en https://dash.cloudflare.com/d1361f54a94074823119c3eccfbb0f17/r2
 
-### Sesión 2026-07-19 — Blog contenido real + imágenes
+### Sesión 2026-07-19 (noche) — Fixes urgentes + Productos
 
-- 9 artículos reales migrados de WordPress (cPanel v2networks → CSV → markdown → EM-DASH CLI)
-- 12 imágenes del blog original copiadas y sirviendo como static assets
-- Artículos con imágenes embebidas en el contenido
-- Footer del blog simplificado (minimalista, diferente a la landing)
-- CTAs corregidos: WhatsApp HTO + Biblioteca Técnica (sin Annie-AI)
-- Colores accent: #E07020 (naranja HTO)
-- Blog 100% funcional en blog.htochile.cl
-- Cuenta Cloudflare correcta: htochilecl@gmail.com
+- **Biblioteca Técnica arreglada** — Mixed content HTTP→HTTPS (commit bae1a8b)
+- **Annie-AI eliminada** del blog completamente (CTA + structured data)
+- **Link Inicio blog** → www.htochile.cl
+- **Header/Footer blog** — ahora coherente con landing (mismo nav, 4 columnas footer)
+- **Imágenes + autor cards blog** — hero-mining-hoses.jpg fallback + "HTO Chile" default
+- **Catálogo productos** — `/productos` con buscador + filtro categoría (commit ec05c13)
+- **Página individual producto** — `/productos/[slug]` con imagen, specs, formulario ficha técnica, WhatsApp cotización
+- **ProductCard** — ahora linkea a la página individual del producto
+- **CTA blog verificado** — "Hablar con Especialista" + "Ver Fichas Técnicas"
+- **Links menú corregidos** — anchors `/#industrias`, `/#productos`, `/#contacto` + IDs en secciones
+- **Blog artículos en home** — 3 artículos reales (PRENSSO, Forceline, Minería)
+
+### Pendientes para mañana (2026-07-20)
+
+| Tarea | Detalle |
+|-------|---------|
+| GTM activadores | Pixel Facebook + LinkedIn conversions |
+| GA4 | Publicar contenedor GTM |
+| Search Console | Verificar DNS TXT + submit sitemap |
+| AEO | Structured data (Organization, Product, Article) |
+| htochile.cl sin www | CNAME @ en Cloudflare |
+| api.docs.htochile.cl | SSL edge certificado (esperar o re-emitir) |
+| R2 | Aceptar TOS en dashboard CF |
 
 ### Artículos del blog (contenido real de HTO Chile)
 
