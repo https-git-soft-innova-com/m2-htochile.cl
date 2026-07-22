@@ -1,6 +1,7 @@
-import { productBrands } from "@/lib/site-data"
+import Image from "next/image"
 
-const brands = [...productBrands, "Transfer Oil", "Ryco", "Hansa-Flex"]
+// import { productBrands } from "@/lib/site-data"
+// const brands = [...productBrands, "Transfer Oil", "Ryco", "Hansa-Flex"]
 
 export function BrandsMarquee() {
   return (
@@ -8,6 +9,26 @@ export function BrandsMarquee() {
       <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground">
         Marcas que representamos
       </p>
+
+      {/* Logos estáticos */}
+      <div className="flex items-center justify-center gap-16 px-4">
+        <Image
+          src="/images/brands/prensso-logo.png"
+          alt="PRENSSO"
+          width={180}
+          height={60}
+          className="h-12 w-auto object-contain"
+        />
+        <Image
+          src="/images/brands/letone-logo.png"
+          alt="Letone"
+          width={180}
+          height={60}
+          className="h-12 w-auto object-contain"
+        />
+      </div>
+
+      {/* Carrusel original comentado
       <div className="flex overflow-hidden">
         <div className="flex shrink-0 animate-marquee items-center gap-16">
           {brands.map((b) => (
@@ -24,6 +45,7 @@ export function BrandsMarquee() {
           ))}
         </div>
       </div>
+      */}
     </section>
   )
 }
