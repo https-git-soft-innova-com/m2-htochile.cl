@@ -15,17 +15,17 @@ export function BrandsMarquee() {
         <Image
           src="/images/brands/prensso-logo.png"
           alt="PRENSSO"
-          width={270}
-          height={90}
-          className="h-18 w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+          width={400}
+          height={135}
+          className="h-28 w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
           style={{ mixBlendMode: "multiply" }}
         />
         <Image
           src="/images/brands/letone-logo.png"
           alt="Letone"
-          width={270}
-          height={90}
-          className="h-18 w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+          width={400}
+          height={135}
+          className="h-28 w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
           style={{ mixBlendMode: "multiply" }}
         />
       </div>
