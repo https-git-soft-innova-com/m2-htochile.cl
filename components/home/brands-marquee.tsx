@@ -11,20 +11,22 @@ export function BrandsMarquee() {
       </p>
 
       {/* Logos estáticos */}
-      <div className="flex items-center justify-center gap-16 px-4">
+      <div className="flex items-center justify-center gap-20 px-4">
         <Image
           src="/images/brands/prensso-logo.png"
           alt="PRENSSO"
-          width={180}
-          height={60}
-          className="h-12 w-auto object-contain"
+          width={270}
+          height={90}
+          className="h-18 w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+          style={{ mixBlendMode: "multiply" }}
         />
         <Image
           src="/images/brands/letone-logo.png"
           alt="Letone"
-          width={180}
-          height={60}
-          className="h-12 w-auto object-contain"
+          width={270}
+          height={90}
+          className="h-18 w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+          style={{ mixBlendMode: "multiply" }}
         />
       </div>
 
