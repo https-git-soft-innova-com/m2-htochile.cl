@@ -17,12 +17,11 @@ export const nav = [
 export const heroSlides = [
   {
     title: "Mangueras Hidráulicas",
-    image: "/images/hero-instrumentation.png",
+    image: "/images/hero-hto-1.jpg",
   },
-  { title: "Mangueras Industriales PVC", image: "/images/hero-automation.png" },
-  { title: "Soluciones para Minería", image: "/images/hero-mining.png" },
-  { title: "Acuicultura e Industria", image: "/images/hero-water.png" },
-  { title: "Maquinaria PRENSSO", image: "/images/hero-energy.png" },
+  { title: "Mangueras Industriales PVC", image: "/images/hero-hto-2.jpg" },
+  { title: "Soluciones para Minería", image: "/images/hero-hto-3.jpg" },
+  { title: "Maquinaria PRENSSO", image: "/images/hero-hto-4.jpg" },
 ]
 
 export const stats = [
