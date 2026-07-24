@@ -398,7 +398,12 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 - **10 fichas técnicas PDF** subidas al Droplet en `/root/docs-storage/MANGUERAS PVC LETONE/`
 - Commit: bf2408b
 
-### Pendientes para mañana (2026-07-24)
+### Sesión 2026-07-24 — Cierre proyecto (en progreso)
+
+- **Imágenes blog:** extractFirstImage utility creada. Cada artículo muestra su imagen real correspondiente.
+- Deploy blog exitoso.
+
+### Pendientes para cerrar proyecto
 
 | Tarea | Detalle |
 |-------|---------|
