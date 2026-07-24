@@ -381,7 +381,24 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 - **Links menú corregidos** — anchors `/#industrias`, `/#productos`, `/#contacto` + IDs en secciones
 - **Blog artículos en home** — 3 artículos reales (PRENSSO, Forceline, Minería)
 
-### Pendientes para mañana (2026-07-20)
+### Sesión 2026-07-22/23 — Hero real + Marcas + Productos nuevos
+
+- **Hero:** 4 fotos reales HTO Chile (convertidas JPG 80%, bg-cover bg-center)
+- **Marcas:** Carrusel comentado, solo logos PRENSSO + Letone estáticos (grayscale → color hover, mixBlendMode multiply)
+- **Productos destacados:** Imágenes reales (Manguera R2, R15, PVC, Conexión JIC, Prensa PHV65)
+- **8 nuevos productos Letone** agregados al catálogo:
+  - PVC Agua/Aire Negra 300 PSI
+  - PVC Aire/Agua Amarilla 300 PSI
+  - Cristal Reforzada Atóxica
+  - Cristal Reforzada
+  - PVC Amarilla Succión y Descarga Liviana
+  - PVC Verde Succión y Descarga Reforzada
+  - PVC Naranja Succión y Descarga Pesada
+  - Manguera Vapor Frigorífico
+- **10 fichas técnicas PDF** subidas al Droplet en `/root/docs-storage/MANGUERAS PVC LETONE/`
+- Commit: bf2408b
+
+### Pendientes para mañana (2026-07-24)
 
 | Tarea | Detalle |
 |-------|---------|
