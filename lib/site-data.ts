@@ -332,7 +332,7 @@ export const products: Product[] = [
     category: "Mangueras Hidráulicas",
     brand: "Parker",
     industry: "Minería",
-    image: "/images/product-transmitter.png",
+    image: "/images/products/manguera-hidraulica-r2.jpg",
     short:
       "Manguera de caucho con doble trenzado de acero para aplicaciones de alta presión en maquinaria pesada.",
     specs: [
@@ -348,7 +348,7 @@ export const products: Product[] = [
     category: "Mangueras Hidráulicas",
     brand: "Gates",
     industry: "Minería",
-    image: "/images/product-flowmeter.png",
+    image: "/images/products/manguera-extrema-r15.jpg",
     short:
       "Manguera de 4 y 6 espirales de acero para equipos de minería y perforación con presiones extremas.",
     specs: [
@@ -364,7 +364,7 @@ export const products: Product[] = [
     category: "Mangueras PVC",
     brand: "Continental",
     industry: "Agroindustria",
-    image: "/images/product-valve.png",
+    image: "/images/products/manguera-pvc-real.jpg",
     short:
       "Manguera PVC reforzada con espiral rígido para succión y descarga de agua, aire y líquidos.",
     specs: [
@@ -380,7 +380,7 @@ export const products: Product[] = [
     category: "Conexiones y Acoples",
     brand: "Parker",
     industry: "Construcción",
-    image: "/images/product-sensor.png",
+    image: "/images/products/conexion-jic-real.jpg",
     short:
       "Fittings JIC 37° en acero carbono con acabado zinc para líneas hidráulicas de media y alta presión.",
     specs: [
@@ -390,6 +390,127 @@ export const products: Product[] = [
       { label: "Medidas", value: '1/4" a 1-1/2"' },
     ],
   },
+  // === MANGUERAS PVC NUEVAS (Letone) ===
+  {
+    slug: "pvc-agua-aire-negra-300psi",
+    name: "Manguera PVC Agua/Aire Negra 300 PSI",
+    category: "Mangueras PVC",
+    brand: "Letone",
+    industry: "Construcción",
+    image: "/images/products/pvc-agua-aire-negra.jpg",
+    short: "Manguera PVC negra para conducción de agua y aire comprimido hasta 300 PSI.",
+    specs: [
+      { label: "Presión", value: "300 PSI" },
+      { label: "Aplicación", value: "Agua y aire" },
+      { label: "Color", value: "Negra" },
+      { label: "Material", value: "PVC reforzado" },
+    ],
+  },
+  {
+    slug: "pvc-aire-agua-amarilla-300psi",
+    name: "Manguera PVC Aire/Agua Amarilla 300 PSI",
+    category: "Mangueras PVC",
+    brand: "Letone",
+    industry: "Construcción",
+    image: "/images/products/pvc-aire-agua-amarilla.jpg",
+    short: "Manguera PVC amarilla para aire y agua, presión de trabajo 300 PSI.",
+    specs: [
+      { label: "Presión", value: "300 PSI" },
+      { label: "Aplicación", value: "Aire y agua" },
+      { label: "Color", value: "Amarilla" },
+      { label: "Material", value: "PVC reforzado" },
+    ],
+  },
+  {
+    slug: "pvc-cristal-reforzada-atoxica",
+    name: "Manguera Cristal Reforzada Atóxica",
+    category: "Mangueras PVC",
+    brand: "Letone",
+    industry: "Alimentos y Bebidas",
+    image: "/images/products/pvc-cristal-atoxica.jpg",
+    short: "Manguera cristal reforzada atóxica apta para uso alimentario y farmacéutico.",
+    specs: [
+      { label: "Certificación", value: "Atóxica / Alimentaria" },
+      { label: "Material", value: "PVC cristal transparente" },
+      { label: "Aplicación", value: "Alimentos, bebidas, farmacéutico" },
+      { label: "Refuerzo", value: "Malla textil" },
+    ],
+  },
+  {
+    slug: "pvc-cristal-reforzada",
+    name: "Manguera Cristal Reforzada",
+    category: "Mangueras PVC",
+    brand: "Letone",
+    industry: "Agroindustria",
+    image: "/images/products/pvc-cristal-reforzada.jpg",
+    short: "Manguera PVC cristal reforzada con malla textil para uso general e industrial.",
+    specs: [
+      { label: "Material", value: "PVC cristal transparente" },
+      { label: "Refuerzo", value: "Malla textil" },
+      { label: "Aplicación", value: "Industrial general, riego" },
+      { label: "Temperatura", value: "-5°C a +60°C" },
+    ],
+  },
+  {
+    slug: "pvc-amarilla-succion-descarga-leve",
+    name: "Manguera PVC Amarilla Succión y Descarga Liviana",
+    category: "Mangueras PVC",
+    brand: "Letone",
+    industry: "Agroindustria",
+    image: "/images/products/pvc-amarilla-succion-leve.jpg",
+    short: "Manguera PVC amarilla liviana con espiral rígido para succión y descarga de agua.",
+    specs: [
+      { label: "Tipo", value: "Succión y descarga liviana" },
+      { label: "Color", value: "Amarilla" },
+      { label: "Espiral", value: "PVC rígido" },
+      { label: "Aplicación", value: "Agua, riego, descarga" },
+    ],
+  },
+  {
+    slug: "pvc-verde-succion-descarga-reforzada",
+    name: "Manguera PVC Verde Succión y Descarga Reforzada",
+    category: "Mangueras PVC",
+    brand: "Letone",
+    industry: "Agroindustria",
+    image: "/images/products/pvc-verde-succion-reforzada.jpg",
+    short: "Manguera PVC verde reforzada con espiral rígido para succión y descarga pesada.",
+    specs: [
+      { label: "Tipo", value: "Succión y descarga reforzada" },
+      { label: "Color", value: "Verde" },
+      { label: "Espiral", value: "PVC rígido reforzado" },
+      { label: "Aplicación", value: "Agua, riego, minería" },
+    ],
+  },
+  {
+    slug: "pvc-naranja-succion-descarga-pesada",
+    name: "Manguera PVC Naranja Succión y Descarga Pesada",
+    category: "Mangueras PVC",
+    brand: "Letone",
+    industry: "Minería",
+    image: "/images/products/pvc-naranja-succion-pesada.jpg",
+    short: "Manguera PVC naranja para succión y descarga pesada en aplicaciones exigentes.",
+    specs: [
+      { label: "Tipo", value: "Succión y descarga pesada" },
+      { label: "Color", value: "Naranja" },
+      { label: "Espiral", value: "PVC rígido extra" },
+      { label: "Aplicación", value: "Minería, construcción" },
+    ],
+  },
+  {
+    slug: "manguera-vapor-frigorifico",
+    name: "Manguera Vapor Frigorífico",
+    category: "Mangueras Industriales",
+    brand: "Letone",
+    industry: "Alimentos y Bebidas",
+    image: "/images/products/manguera-vapor-frigorifico.jpg",
+    short: "Manguera para vapor y aplicaciones frigoríficas con resistencia a altas y bajas temperaturas.",
+    specs: [
+      { label: "Aplicación", value: "Vapor y frigorífico" },
+      { label: "Temperatura", value: "-40°C a +165°C" },
+      { label: "Material", value: "Caucho EPDM" },
+      { label: "Refuerzo", value: "Textil trenzado" },
+    ],
+  },
   // === PRENSAS HIDRÁULICAS PRENSSO ===
   {
     slug: "prensa-hidraulica-phv65tfp",
@@ -397,7 +518,7 @@ export const products: Product[] = [
     category: "Prensas Hidráulicas",
     brand: "PRENSSO",
     industry: "Manufactura",
-    image: "/images/products/prensa-phv65tfp.jpg",
+    image: "/images/products/prensa-phv65-real.jpg",
     short:
       "Prensa hidráulica de alto rendimiento para prensado de mangueras de hasta 2\". Operación trifásica con panel digital.",
     specs: [
