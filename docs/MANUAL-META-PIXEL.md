@@ -50,6 +50,67 @@ ID del Pixel: 123456789012345
    - Si eligen Meta-tag: enviar el tag a felipe.ahumada@soft-innova.com para agregarlo al código
 4. Click en **"Verificar"**
 
+### 5. Verificar la empresa en Meta Business Manager
+
+> **Importante:** Meta requiere verificación de la empresa para acceder a funciones avanzadas (conversiones API, audiencias personalizadas, acceso completo al Pixel). Sin verificación, el Pixel funciona pero con limitaciones.
+
+#### ¿Por qué verificar?
+
+- Acceso completo a eventos de conversión
+- Poder usar la API de Conversiones (CAPI)
+- Crear audiencias de remarketing sin restricciones
+- Mayor confianza en los datos (iOS 14+ tracking)
+- Acceso a funciones avanzadas de anuncios
+
+#### Paso a paso para verificar la empresa
+
+1. Ir a [business.facebook.com/settings/security](https://business.facebook.com/settings/security)
+2. En la sección **"Verificación del negocio"** → click en **"Iniciar verificación"**
+3. Completar los datos:
+   - **Nombre legal del negocio:** HTO Chile SpA (o como aparece en SII)
+   - **País:** Chile
+   - **Dirección:** Nueva Providencia 2134, Of. 1001, Providencia, RM
+   - **Teléfono:** +56 9 7724 1488
+   - **Sitio web:** https://www.htochile.cl
+   - **RUT empresa:** (el RUT de HTO Chile)
+
+4. **Subir documentos** — Meta pedirá UNO de estos:
+   - Certificado de vigencia (SII o Registro de Comercio)
+   - Patente comercial
+   - Factura de servicios a nombre de la empresa (luz, agua, internet)
+   - Extracto bancario con el nombre de la empresa
+   - Certificado de inscripción en el SII (Formulario F-2233)
+
+   > **Recomendación:** Usar el **Certificado de vigencia del SII** — se obtiene gratis en [www.sii.cl](https://www.sii.cl) → Servicios Online → Situación tributaria → Certificado de vigencia.
+
+5. **Método de verificación de contacto** — Meta enviará un código por:
+   - Email del dominio (ej: contacto@htochile.cl) ← **recomendado**
+   - Teléfono registrado
+   - Documento adicional
+
+6. Ingresar el código recibido → click **"Verificar"**
+
+#### Tiempo de respuesta
+
+- **Automático:** 1-5 minutos si los datos coinciden con registros públicos
+- **Revisión manual:** 1-5 días hábiles si requiere validación de documentos
+- **Rechazado:** Meta indica qué falta. Se puede reintentar.
+
+#### Errores comunes
+
+| Problema | Solución |
+|----------|----------|
+| "No pudimos verificar tu negocio" | El nombre legal no coincide con el documento subido |
+| "Dominio no verificado" | Primero verificar el dominio (paso 4) antes de la empresa |
+| "Necesitamos documentos adicionales" | Subir un segundo documento (factura + certificado SII) |
+| "Teléfono no coincide" | Usar el teléfono que aparece en el documento subido |
+
+#### Estado de verificación
+
+- 🟡 **Pendiente** — En revisión por Meta
+- 🟢 **Verificado** — Acceso completo habilitado
+- 🔴 **Rechazado** — Corregir y reintentar
+
 ### 5. Configurar eventos estándar (opcional - lo hacemos nosotros)
 
 Los siguientes eventos ya están preparados en la web via GTM:
