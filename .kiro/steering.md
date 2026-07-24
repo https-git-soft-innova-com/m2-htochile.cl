@@ -401,6 +401,8 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 ### Sesión 2026-07-24 — Cierre proyecto (en progreso)
 
 - **Imágenes blog:** extractFirstImage utility creada. Cada artículo muestra su imagen real correspondiente.
+- **Manual Meta Pixel:** creado en /docs/MANUAL-META-PIXEL.md
+- **Manual LinkedIn:** creado en /docs/MANUAL-LINKEDIN.md (commit 94a5ce0)
 - Deploy blog exitoso.
 
 ### Pendientes para cerrar proyecto
