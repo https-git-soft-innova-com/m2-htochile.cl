@@ -401,9 +401,23 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 ### Sesión 2026-07-24 — Cierre proyecto (en progreso)
 
 - **Imágenes blog:** extractFirstImage utility creada. Cada artículo muestra su imagen real correspondiente.
-- **Manual Meta Pixel:** creado en /docs/MANUAL-META-PIXEL.md
+- **Manual Meta Pixel:** creado en /docs/MANUAL-META-PIXEL.md (incluye verificación de empresa)
 - **Manual LinkedIn:** creado en /docs/MANUAL-LINKEDIN.md (commit 94a5ce0)
+- **Verificación empresa Meta:** sección completa agregada al manual (commit 1fd70d7)
 - Deploy blog exitoso.
+
+### Estado: Esperando respuesta del cliente
+
+| Tarea | Estado | Bloqueado por |
+|-------|--------|---------------|
+| a) Imágenes blog | ✅ Completado | — |
+| b) Manual Meta Pixel | ✅ Completado | — |
+| c) Manual LinkedIn | ✅ Completado | — |
+| d) SEO Técnico + Lighthouse + OWASP | ⏳ Pendiente | — |
+| e) Panel Looker Studio | ⏳ Pendiente | GA4 acumulando datos |
+| f) Pixel + LinkedIn en GTM | ⏳ Bloqueado | Esperando IDs de comercial HTO |
+
+**Próxima acción:** Cuando el cliente entregue el Meta Pixel ID y LinkedIn Partner ID, se configuran en GTM y se cierra el proyecto.
 
 ### Pendientes para cerrar proyecto
 
