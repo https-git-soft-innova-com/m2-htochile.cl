@@ -504,3 +504,12 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
   - mangueras-gran-diametro-mineria → `/images/hero-mining-hoses.jpg` (mangueras gran diámetro)
 - **Colores/header/footer blog:** Ya unificados — las cards del blog están dentro de la landing y heredan mismo diseño (site-header, site-footer, paleta HTO)
 - Estado: ✅ Completado
+
+### 2026-08-03 (9) — Blog: colores HTO + imágenes correctas + CTA legible
+
+- **Base.astro (blog):** Header verde HTO permanente (#045e2d), links blancos, footer verde HTO (antes azul #0B1F3A)
+- **CTABanner.astro:** Fondo cambiado de azul a verde HTO. Botón primario ahora blanco con texto verde (antes naranja sobre naranja = ilegible)
+- **Imágenes artículos:** Agregado `extractFirstImage()` como fallback en posts/index, category/[slug], tag/[slug], posts/[slug] — cada artículo ahora muestra su imagen real del markdown
+- **Deploy:** Blog redesplegado en Cloudflare Workers (htochile-blog.fahumada-d15.workers.dev)
+- **wrangler.jsonc:** Actualizado con IDs correctos de la cuenta (D1: blog-soft-innova, KV: session-blog-soft-innova)
+- Estado: ✅ Completado
