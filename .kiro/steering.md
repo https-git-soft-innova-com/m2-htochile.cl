@@ -462,3 +462,10 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 - **product-card.tsx:** Eliminada la línea de marca (`product.brand`) que aparecía arriba del título
 - **product-card.tsx:** Agregado `mt-5` (20px) de margen superior en todas las imágenes de las cards
 - Estado: ✅ Completado — verificado en localhost:3001
+
+### 2026-08-02 (3) — Actualización logos marcas representadas
+
+- **letone-logo.png:** Reemplazado con nuevo logo "Marca Representada" (81KB)
+- **prensso-logo.png:** Reemplazado con nuevo logo "Marca Representada" (188KB)
+- Fuente: OneDrive_2_2-8-2026 (entregados por cliente)
+- Estado: ✅ Completado
