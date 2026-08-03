@@ -474,3 +474,8 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 
 - **brands-marquee.tsx:** Logo Letone aumentado de `h-28` (112px) a `h-[140px]` (+25%)
 - Estado: ✅ Completado
+
+### 2026-08-02 (5) — Imagen eventos/blog ajustada al contenedor
+
+- **blog-card.tsx:** Aspect ratio cambiado de `aspect-16/10` a `aspect-video` (16:9) — imagen más compacta, ajustada al tamaño del contenedor
+- Estado: ✅ Completado

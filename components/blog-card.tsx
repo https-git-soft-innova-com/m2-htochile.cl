@@ -10,7 +10,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
       href={`https://blog.htochile.cl/posts/${post.slug}`}
       className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-[var(--brand)]/5"
     >
-      <div className="relative aspect-16/10 overflow-hidden">
+      <div className="relative aspect-video overflow-hidden">
         <Image
           src={post.image || "/placeholder.svg"}
           alt={post.title}
