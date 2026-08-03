@@ -859,7 +859,7 @@ export const blogPosts: BlogPost[] = [
     category: "Maquinaria",
     excerpt:
       "Incorporación de equipos PRENSSO para fortalecer capacidad técnica en sistemas hidráulicos.",
-    image: "/images/industries/manufactura.jpg",
+    image: "/images/products/prensa-phv65-real.jpg",
     date: "12 Feb 2026",
     readTime: "3 min",
   },
@@ -869,7 +869,7 @@ export const blogPosts: BlogPost[] = [
     category: "Alianzas",
     excerpt:
       "Visita a Forceline en Brasil para conocer su operación y fortalecer nuevas alianzas industriales.",
-    image: "/images/industries/forestal.jpg",
+    image: "/images/hero-hto-3.jpg",
     date: "13 Mar 2026",
     readTime: "4 min",
   },
@@ -879,7 +879,7 @@ export const blogPosts: BlogPost[] = [
     category: "Minería",
     excerpt:
       "Soluciones logísticas para mangueras industriales de gran diámetro en operaciones mineras de Chile.",
-    image: "/images/industries/mineria.jpg",
+    image: "/images/hero-mining-hoses.jpg",
     date: "26 Feb 2026",
     readTime: "4 min",
   },

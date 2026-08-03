@@ -495,3 +495,12 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 - **home-hero.tsx:** Icono form cambiado a naranja (accent), form bajado con lg:mt-16 para alinearse con título, efecto animate-pulse-orange en los 3 botones (Solicitar Cotización, Hablar con Especialista, Enviar por WhatsApp)
 - **brands-marquee.tsx:** Letone con scale-150 (50% más grande visualmente) sin agrandar contenedor de la sección
 - Estado: ✅ Completado
+
+### 2026-08-02 (8) — Imágenes artículos blog corregidas
+
+- **site-data.ts blogPosts:** Imágenes corregidas según contenido real de cada artículo:
+  - maquinaria-prensso → `/images/products/prensa-phv65-real.jpg` (maquinaria PRENSSO)
+  - visita-forceline-brasil → `/images/hero-hto-3.jpg` (alianzas industriales HTO)
+  - mangueras-gran-diametro-mineria → `/images/hero-mining-hoses.jpg` (mangueras gran diámetro)
+- **Colores/header/footer blog:** Ya unificados — las cards del blog están dentro de la landing y heredan mismo diseño (site-header, site-footer, paleta HTO)
+- Estado: ✅ Completado
