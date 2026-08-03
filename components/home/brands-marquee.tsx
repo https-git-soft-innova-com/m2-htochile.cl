@@ -24,8 +24,8 @@ export function BrandsMarquee() {
           src="/images/brands/letone-logo.png"
           alt="Letone"
           width={400}
-          height={135}
-          className="h-28 w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+          height={170}
+          className="h-[140px] w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
           style={{ mixBlendMode: "multiply" }}
         />
       </div>

@@ -469,3 +469,8 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 - **prensso-logo.png:** Reemplazado con nuevo logo "Marca Representada" (188KB)
 - Fuente: OneDrive_2_2-8-2026 (entregados por cliente)
 - Estado: ✅ Completado
+
+### 2026-08-02 (4) — Logo Letone más alto en sección representantes
+
+- **brands-marquee.tsx:** Logo Letone aumentado de `h-28` (112px) a `h-[140px]` (+25%)
+- Estado: ✅ Completado
