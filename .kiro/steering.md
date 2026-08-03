@@ -456,3 +456,9 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 - **Docker:** Dockerfile arreglado (--ignore-scripts para pnpm 11), .dockerignore creado, docker-compose en puerto 3001
 - **Regla cierre tarea:** `.kiro/rules/cierre-tarea.md` — al completar cada tarea: steering + commit + push
 - Estado: ✅ Completado — verificado en localhost:3001
+
+### 2026-08-02 (2) — Fix cards productos: quitar marca + margen top imágenes
+
+- **product-card.tsx:** Eliminada la línea de marca (`product.brand`) que aparecía arriba del título
+- **product-card.tsx:** Agregado `mt-5` (20px) de margen superior en todas las imágenes de las cards
+- Estado: ✅ Completado — verificado en localhost:3001

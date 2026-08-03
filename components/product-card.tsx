@@ -8,7 +8,7 @@ import { type Product, whatsappUrl } from "@/lib/site-data"
 export function ProductCard({ product }: { product: Product }) {
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all hover:border-accent/40 hover:shadow-lg hover:shadow-[var(--brand)]/5">
-      <Link href={`/productos/${product.slug}`} className="relative aspect-4/3 overflow-hidden bg-secondary/60">
+      <Link href={`/productos/${product.slug}`} className="relative mt-5 aspect-4/3 overflow-hidden bg-secondary/60">
         <Image
           src={product.image || "/placeholder.svg"}
           alt={product.name}
@@ -21,11 +21,8 @@ export function ProductCard({ product }: { product: Product }) {
         </Badge>
       </Link>
       <div className="flex flex-1 flex-col p-5">
-        <p className="text-xs font-medium uppercase tracking-wider text-[var(--brand-2)]">
-          {product.brand}
-        </p>
         <Link href={`/productos/${product.slug}`}>
-          <h3 className="mt-1.5 text-base font-semibold leading-snug text-foreground hover:text-accent transition-colors">
+          <h3 className="text-base font-semibold leading-snug text-foreground hover:text-accent transition-colors">
             {product.name}
           </h3>
         </Link>
