@@ -83,7 +83,7 @@ export function HomeHero() {
             transition={{ delay: 0.3 }}
             className="mt-8 flex flex-col gap-3 sm:flex-row"
           >
-            <Button asChild size="lg" className="gap-2 bg-accent text-white hover:bg-accent/90">
+            <Button asChild size="lg" className="animate-pulse-orange gap-2 bg-accent text-white hover:bg-accent/90">
               <Link href="/#contacto">
                 <FileText className="size-4" />
                 Solicitar Cotización
@@ -93,7 +93,7 @@ export function HomeHero() {
               asChild
               size="lg"
               variant="outline"
-              className="gap-2 border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
+              className="animate-pulse-orange gap-2 border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
             >
               <a
                 href={whatsappUrl("Hola, necesito hablar con un especialista de HTO.")}
@@ -112,11 +112,11 @@ export function HomeHero() {
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
-          className="w-full max-w-sm rounded-2xl border border-white/15 bg-transparent p-6 backdrop-blur-sm"
+          className="w-full max-w-sm lg:mt-16 rounded-2xl border border-white/15 bg-transparent p-6 backdrop-blur-sm"
         >
           <div className="mb-4 flex items-center gap-3">
-            <div className="flex size-10 items-center justify-center rounded-full bg-green-500/20">
-              <MessageCircle className="size-5 text-green-400" />
+            <div className="flex size-10 items-center justify-center rounded-full bg-[var(--accent)]/20">
+              <MessageCircle className="size-5 text-[var(--accent)]" />
             </div>
             <div>
               <h3 className="text-base font-semibold text-white">Consultas rápidas</h3>
@@ -169,7 +169,7 @@ export function HomeHero() {
             <Button
               type="submit"
               size="sm"
-              className="mt-2 w-full gap-2 bg-green-600 text-white hover:bg-green-700"
+              className="animate-pulse-orange mt-2 w-full gap-2 bg-green-600 text-white hover:bg-green-700"
             >
               <MessageCircle className="size-4" />
               Enviar por WhatsApp

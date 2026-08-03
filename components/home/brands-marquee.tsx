@@ -20,13 +20,13 @@ export function BrandsMarquee() {
           className="h-28 w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
           style={{ mixBlendMode: "multiply" }}
         />
-        <div className="h-28 w-auto overflow-hidden flex items-center">
+        <div className="h-28 w-auto overflow-visible flex items-center">
           <Image
             src="/images/brands/letone-logo.png"
             alt="Letone"
-            width={500}
-            height={210}
-            className="h-[168px] w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+            width={400}
+            height={135}
+            className="h-28 w-auto scale-150 object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
             style={{ mixBlendMode: "multiply" }}
           />
         </div>

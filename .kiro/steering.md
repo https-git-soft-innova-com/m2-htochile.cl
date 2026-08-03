@@ -489,3 +489,9 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 - **globals.css:** Keyframe pulse-orange para efecto glow naranja en botones
 - **Imagen:** manguera-pvc-real.png reemplazada con nueva versión (Manguera PVC Amarilla Prod. Destacado)
 - Estado: ✅ Completado — verificado en localhost:3001
+
+### 2026-08-02 (7) — Ajustes Hero + Marcas + Pulsar
+
+- **home-hero.tsx:** Icono form cambiado a naranja (accent), form bajado con lg:mt-16 para alinearse con título, efecto animate-pulse-orange en los 3 botones (Solicitar Cotización, Hablar con Especialista, Enviar por WhatsApp)
+- **brands-marquee.tsx:** Letone con scale-150 (50% más grande visualmente) sin agrandar contenedor de la sección
+- Estado: ✅ Completado
