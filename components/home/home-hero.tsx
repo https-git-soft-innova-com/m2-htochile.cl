@@ -125,12 +125,20 @@ export function HomeHero() {
           </div>
           <form
             className="flex flex-col gap-3"
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault()
               const form = e.currentTarget
               const nombre = (form.elements.namedItem("nombre") as HTMLInputElement).value
               const telefono = (form.elements.namedItem("telefono") as HTMLInputElement).value
               const email = (form.elements.namedItem("email") as HTMLInputElement).value
+
+              // Guardar lead en base de datos
+              fetch("/api/leads", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name: nombre, phone: telefono, email, source: "hero-form" }),
+              }).catch(() => {})
+
               const msg = `Hola, soy ${nombre}. Mi teléfono: ${telefono}, email: ${email}. Necesito que me contacten.`
               window.open(whatsappUrl(msg), "_blank")
             }}
