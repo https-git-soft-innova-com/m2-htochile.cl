@@ -20,14 +20,16 @@ export function BrandsMarquee() {
           className="h-28 w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
           style={{ mixBlendMode: "multiply" }}
         />
-        <Image
-          src="/images/brands/letone-logo.png"
-          alt="Letone"
-          width={400}
-          height={170}
-          className="h-[140px] w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
-          style={{ mixBlendMode: "multiply" }}
-        />
+        <div className="h-28 w-auto overflow-hidden flex items-center">
+          <Image
+            src="/images/brands/letone-logo.png"
+            alt="Letone"
+            width={400}
+            height={170}
+            className="h-[140px] w-auto object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+            style={{ mixBlendMode: "multiply" }}
+          />
+        </div>
       </div>
 
       {/* Carrusel original comentado
