@@ -513,3 +513,26 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 - **Deploy:** Blog redesplegado en Cloudflare Workers (htochile-blog.fahumada-d15.workers.dev)
 - **wrangler.jsonc:** Actualizado con IDs correctos de la cuenta (D1: blog-soft-innova, KV: session-blog-soft-innova)
 - Estado: ✅ Completado
+
+### 2026-08-03 — Deploy producción + cierre sesión
+
+- **Landing (www.htochile.cl):** Desplegada en Vercel (automático desde main). Commit 3718ebc.
+- **Blog (blog.htochile.cl):** Desplegado en Cloudflare Workers. Colores HTO, header/footer verde, CTA legible, imágenes fallback.
+- Ambos sitios verificados HTTP 200 en producción.
+
+#### Resumen de cambios sesión 2026-08-02/03:
+1. Productos destacados: solo 4 (Manguera Alta Presión, Prensa PHV65, PVC Succión, Conexiones JIC)
+2. Imágenes cards: object-cover (cubren toda la card)
+3. Marca eliminada de cards
+4. Logos representantes actualizados (PRENSSO + Letone nuevos)
+5. Letone scale-150 sin agrandar sección
+6. Badge subido 10px
+7. Imagen PVC nueva (amarilla)
+8. Botones alineados (mt-auto)
+9. Hero: formulario WhatsApp rápido (nombre, teléfono, email + Ley 21.719), fondo transparente, icono naranja
+10. Efecto pulsar naranja en 3 botones "Solicitar Cotización"
+11. Blog: colores HTO verde, CTA legible, imágenes por artículo (extractFirstImage)
+12. Docker: Dockerfile arreglado + .dockerignore + regla cierre-tarea
+
+#### 🔴 PENDIENTE próxima sesión:
+- **Imágenes artículos del blog:** Revisar que cada artículo tenga su imagen correcta asociada. Algunos artículos pueden no mostrar imagen porque el contenido en D1 no tiene el markdown con `![](...)`. Verificar en blog.htochile.cl y corregir los que fallen.
