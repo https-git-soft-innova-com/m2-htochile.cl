@@ -16,7 +16,7 @@ export function ProductCard({ product }: { product: Product }) {
           sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover transition-transform duration-500 hover:scale-105"
         />
-        <Badge className="absolute left-3 top-3 bg-[var(--brand)] text-white hover:bg-[var(--brand)]">
+        <Badge className="absolute left-3 top-[2px] bg-[var(--brand)] text-white hover:bg-[var(--brand)]">
           {product.category}
         </Badge>
       </Link>
@@ -29,8 +29,8 @@ export function ProductCard({ product }: { product: Product }) {
         <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
           {product.short}
         </p>
-        <div className="mt-4 flex flex-col gap-2 pt-1">
-          <Button asChild size="sm" className="w-full gap-2 bg-[var(--brand)] text-white hover:bg-[var(--brand-2)]">
+        <div className="mt-auto flex flex-col gap-2 pt-4">
+          <Button asChild size="sm" className="animate-pulse-orange w-full gap-2 bg-[var(--brand)] text-white hover:bg-[var(--brand-2)]">
             <a
               href={whatsappUrl(`Hola, necesito una cotización del producto: ${product.name}.`)}
               target="_blank"

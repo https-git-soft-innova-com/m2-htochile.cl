@@ -43,7 +43,8 @@ export function HomeHero() {
       />
 
       <div className="relative mx-auto w-full max-w-7xl px-4 pt-28 pb-16 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
+        <div className="max-w-3xl lg:max-w-2xl">
           <AnimatePresence mode="wait">
             <motion.span
               key={heroSlides[active].title}
@@ -104,6 +105,77 @@ export function HomeHero() {
               </a>
             </Button>
           </motion.div>
+        </div>
+
+        {/* Formulario rápido WhatsApp */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4 }}
+          className="w-full max-w-sm rounded-2xl border border-white/15 bg-transparent p-6 backdrop-blur-sm"
+        >
+          <div className="mb-4 flex items-center gap-3">
+            <div className="flex size-10 items-center justify-center rounded-full bg-green-500/20">
+              <MessageCircle className="size-5 text-green-400" />
+            </div>
+            <div>
+              <h3 className="text-base font-semibold text-white">Consultas rápidas</h3>
+              <p className="text-sm text-white/70">Te llamamos nosotros</p>
+            </div>
+          </div>
+          <form
+            className="flex flex-col gap-3"
+            onSubmit={(e) => {
+              e.preventDefault()
+              const form = e.currentTarget
+              const nombre = (form.elements.namedItem("nombre") as HTMLInputElement).value
+              const telefono = (form.elements.namedItem("telefono") as HTMLInputElement).value
+              const email = (form.elements.namedItem("email") as HTMLInputElement).value
+              const msg = `Hola, soy ${nombre}. Mi teléfono: ${telefono}, email: ${email}. Necesito que me contacten.`
+              window.open(whatsappUrl(msg), "_blank")
+            }}
+          >
+            <input
+              name="nombre"
+              type="text"
+              required
+              placeholder="Nombre"
+              className="rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/50 outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/40"
+            />
+            <input
+              name="telefono"
+              type="tel"
+              required
+              placeholder="+569 12312312"
+              className="rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/50 outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/40"
+            />
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Correo electrónico"
+              className="rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/50 outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/40"
+            />
+            <label className="flex items-start gap-2 mt-1">
+              <input
+                type="checkbox"
+                required
+                className="mt-1 size-4 rounded border-white/30 accent-accent"
+              />
+              <span className="text-xs leading-tight text-white/70">
+                Autorizo el tratamiento de mis datos personales con fines estadísticos y de contacto comercial, conforme a la Ley 21.719 sobre Protección de Datos Personales de Chile.
+              </span>
+            </label>
+            <Button
+              type="submit"
+              size="sm"
+              className="mt-2 w-full gap-2 bg-green-600 text-white hover:bg-green-700"
+            >
+              <MessageCircle className="size-4" />
+              Enviar por WhatsApp
+            </Button>
+          </form>
+        </motion.div>
         </div>
 
         {/* floating statistics */}

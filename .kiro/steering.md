@@ -479,3 +479,13 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 
 - **blog-card.tsx:** Aspect ratio cambiado de `aspect-16/10` a `aspect-video` (16:9) — imagen más compacta, ajustada al tamaño del contenedor
 - Estado: ✅ Completado
+
+### 2026-08-02 (6) — Tanda de fixes: Letone, badge, PVC, botones, Hero form, pulsar
+
+- **brands-marquee.tsx:** Letone logo 50% más grande (h-[168px]) sin agrandar contenedor (h-28 + overflow-hidden)
+- **product-card.tsx:** Badge subido 10px (top-[2px]), botones con mt-auto (misma altura), efecto animate-pulse-orange en "Solicitar Cotización"
+- **site-data.ts:** Imagen PVC actualizada a .png (nueva imagen amarilla)
+- **home-hero.tsx:** Formulario rápido WhatsApp agregado al lado derecho (nombre, teléfono, email + checkbox Ley 21.719), fondo transparente con backdrop-blur
+- **globals.css:** Keyframe pulse-orange para efecto glow naranja en botones
+- **Imagen:** manguera-pvc-real.png reemplazada con nueva versión (Manguera PVC Amarilla Prod. Destacado)
+- Estado: ✅ Completado — verificado en localhost:3001

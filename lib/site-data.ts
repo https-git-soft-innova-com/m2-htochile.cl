@@ -364,7 +364,7 @@ export const products: Product[] = [
     category: "Mangueras PVC",
     brand: "Continental",
     industry: "Agroindustria",
-    image: "/images/products/manguera-pvc-real.jpg",
+    image: "/images/products/manguera-pvc-real.png",
     short:
       "Manguera PVC reforzada con espiral rígido para succión y descarga de agua, aire y líquidos.",
     specs: [
