@@ -93,7 +93,7 @@ export function HomeHero() {
               asChild
               size="lg"
               variant="outline"
-              className="animate-pulse-orange gap-2 border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
+              className="gap-2 border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
             >
               <a
                 href={whatsappUrl("Hola, necesito hablar con un especialista de HTO.")}
@@ -169,7 +169,7 @@ export function HomeHero() {
             <Button
               type="submit"
               size="sm"
-              className="animate-pulse-orange mt-2 w-full gap-2 bg-green-600 text-white hover:bg-green-700"
+              className="mt-2 w-full gap-2 bg-green-600 text-white hover:bg-green-700"
             >
               <MessageCircle className="size-4" />
               Enviar por WhatsApp
