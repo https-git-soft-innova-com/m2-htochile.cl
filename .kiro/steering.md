@@ -444,3 +444,15 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 | 7 | visita-forceline-brasil | Visita Forceline en Brasil | 2026-03-13 |
 | 8 | almacenamiento-mangueras | Almacenamiento correcto de mangueras | 2026-03-24 |
 | 9 | hto-chile-recorre-el-pais | Recorre el país con Prensso Maquinarias | 2026-03-27 |
+
+### 2026-08-02 — Fix productos destacados + imágenes
+
+- **product-card.tsx:** Imagen cambiada de `object-contain p-6` a `object-cover` — ahora cubre completamente el bloque de imagen sin padding
+- **home-products.tsx:** Productos destacados filtrados a solo 4 específicos:
+  1. Manguera Hidráulica Alta Presión (`manguera-hidraulica-alta-presion`)
+  2. Prensa Hidráulica PHV65 TFP (`prensa-hidraulica-phv65tfp`)
+  3. Manguera PVC Succión (`manguera-pvc-succion`)
+  4. Conexiones JIC Acero (`conexiones-jic-acero`)
+- **Docker:** Dockerfile arreglado (--ignore-scripts para pnpm 11), .dockerignore creado, docker-compose en puerto 3001
+- **Regla cierre tarea:** `.kiro/rules/cierre-tarea.md` — al completar cada tarea: steering + commit + push
+- Estado: ✅ Completado — verificado en localhost:3001

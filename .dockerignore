@@ -1,0 +1,9 @@
+node_modules
+.next
+.git
+.obsidian
+.vercel
+*.pdf
+*.png
+*.jpg
+data.db

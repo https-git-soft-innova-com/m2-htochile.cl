@@ -7,8 +7,16 @@ import { Button } from "@/components/ui/button"
 import { ProductCard } from "@/components/product-card"
 import { products } from "@/lib/site-data"
 
+const FEATURED_SLUGS = [
+  "manguera-hidraulica-alta-presion",
+  "prensa-hidraulica-phv65tfp",
+  "manguera-pvc-succion",
+  "conexiones-jic-acero",
+]
+
 export function HomeProducts() {
   const scroller = useRef<HTMLDivElement>(null)
+  const featuredProducts = FEATURED_SLUGS.map((slug) => products.find((p) => p.slug === slug)!).filter(Boolean)
 
   const scroll = (dir: number) => {
     scroller.current?.scrollBy({ left: dir * 340, behavior: "smooth" })
@@ -51,7 +59,7 @@ export function HomeProducts() {
           ref={scroller}
           className="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {products.map((p) => (
+          {featuredProducts.map((p) => (
             <div
               key={p.slug}
               className="w-[280px] shrink-0 snap-start sm:w-[320px]"
