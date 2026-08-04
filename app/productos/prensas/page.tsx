@@ -25,7 +25,7 @@ export default function PrensasPage() {
 
   return (
     <>
-      <section className="bg-[var(--brand)] py-14 text-white">
+      <section className="bg-[var(--brand)] pt-28 pb-14 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-medium uppercase tracking-wider text-white/70 mb-2">
             Catálogo
