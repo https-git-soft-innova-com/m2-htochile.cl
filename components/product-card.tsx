@@ -22,7 +22,7 @@ export function ProductCard({ product }: { product: Product }) {
       </Link>
       <div className="flex flex-1 flex-col p-5">
         <Link href={`/productos/${product.slug}`}>
-          <h3 className="text-base font-semibold leading-snug text-foreground hover:text-accent transition-colors">
+          <h3 className="text-base font-semibold leading-snug text-[var(--brand-2)] hover:text-accent transition-colors">
             {product.name}
           </h3>
         </Link>
@@ -30,7 +30,7 @@ export function ProductCard({ product }: { product: Product }) {
           {product.short}
         </p>
         <div className="mt-auto flex flex-col gap-2 pt-4">
-          <Button asChild size="sm" className="animate-pulse-orange w-full gap-2 bg-[var(--brand)] text-white hover:bg-[var(--brand-2)]">
+          <Button asChild size="sm" className="animate-pulse-orange w-full gap-2 bg-accent text-white hover:bg-accent/90">
             <a
               href={whatsappUrl(`Hola, necesito una cotización del producto: ${product.name}.`)}
               target="_blank"

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Search, ChevronRight, Home } from "lucide-react"
+import { Search } from "lucide-react"
 import { products } from "@/lib/site-data"
 import { Input } from "@/components/ui/input"
 import { ProductCard } from "@/components/product-card"
@@ -25,28 +25,6 @@ export default function PrensasPage() {
 
   return (
     <>
-      {/* Breadcrumbs */}
-      <nav className="bg-secondary/50 py-3" aria-label="Breadcrumb">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <ol className="flex items-center gap-2 text-sm text-muted-foreground">
-            <li>
-              <Link href="/" className="flex items-center gap-1 hover:text-foreground">
-                <Home className="size-3.5" />
-                Inicio
-              </Link>
-            </li>
-            <ChevronRight className="size-3.5" />
-            <li>
-              <Link href="/productos" className="hover:text-foreground">
-                Productos
-              </Link>
-            </li>
-            <ChevronRight className="size-3.5" />
-            <li className="font-medium text-foreground">Prensas y Maquinaria</li>
-          </ol>
-        </div>
-      </nav>
-
       <section className="bg-[var(--brand)] py-14 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-medium uppercase tracking-wider text-white/70 mb-2">

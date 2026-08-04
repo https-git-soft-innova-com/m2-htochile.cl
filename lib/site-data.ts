@@ -8,7 +8,7 @@ export const nav = [
   { label: "Inicio", href: "/" },
   { label: "Quiénes Somos", href: "/quienes-somos" },
   { label: "Industrias", href: "/#industrias" },
-  { label: "Productos", href: "/#productos" },
+  { label: "Productos", href: "/productos" },
   { label: "Biblioteca Técnica", href: "/biblioteca-tecnica" },
   { label: "Blog", href: "https://blog.htochile.cl" },
   { label: "Contacto", href: "/#contacto" },
