@@ -551,3 +551,13 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
   - Sitemap actualizado con 3 nuevas URLs (prioridad 0.85)
 - **UX:** Landing visual con cards grandes → 1 click a categoría → filtro/búsqueda
 - Estado: ✅ Completado — verificado en localhost:3001
+
+### 2026-08-03 (11) — Ajustes finales productos
+
+- **site-data.ts:** Link nav "Productos" cambiado de `/#productos` a `/productos`
+- **Breadcrumbs eliminados** en fittings, mangueras y prensas (redundante con el menú)
+- **product-card.tsx:** Botón "Solicitar Cotización" ahora naranja (`bg-accent`), título productos en color crema (`text-[var(--brand-2)]`)
+- **Padding top** (`pt-28`) en todos los headers de páginas de productos para no chocar con el menú fijo
+- **Imports** limpiados (ChevronRight, Home removidos)
+- Deploy: producción actualizada (commits 3cf957c, 96b80aa)
+- Estado: ✅ Completado
