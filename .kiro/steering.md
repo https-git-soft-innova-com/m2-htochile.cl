@@ -536,3 +536,18 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 
 #### 🔴 PENDIENTE próxima sesión:
 - **Imágenes artículos del blog:** Revisar que cada artículo tenga su imagen correcta asociada. Algunos artículos pueden no mostrar imagen porque el contenido en D1 no tiene el markdown con `![](...)`. Verificar en blog.htochile.cl y corregir los que fallen.
+
+### 2026-08-03 (10) — Reestructuración catálogo productos por categorías
+
+- **Arquitectura:** `/productos` → landing 3 categorías → páginas individuales
+  - `/productos/fittings` — Accesorios y conexiones (1 producto)
+  - `/productos/mangueras` — Hidráulicas + PVC + Industriales con sub-filtros pills (11 productos)
+  - `/productos/prensas` — Prensas + maquinaria PRENSSO (18 productos)
+- **site-data.ts:** Campo `group: "fittings" | "mangueras" | "prensas"` agregado a todos los productos
+- **SEO/AEO:**
+  - Metadata específica por categoría
+  - Breadcrumbs en cada página
+  - Structured Data (CollectionPage + ItemList + Product) en cada página
+  - Sitemap actualizado con 3 nuevas URLs (prioridad 0.85)
+- **UX:** Landing visual con cards grandes → 1 click a categoría → filtro/búsqueda
+- Estado: ✅ Completado — verificado en localhost:3001
