@@ -885,33 +885,33 @@ export const blogCategories = ["Hidráulica", "Industrial", "Casos de Éxito", "
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "maquinaria-prensso",
-    title: "HTO Chile refuerza su capacidad técnica con maquinaria PRENSSO",
+    slug: "hto-chile-recorre-el-pais",
+    title: "HTO Chile recorre el país junto a Prensso Maquinarias para fortalecer soluciones industriales en terreno",
     category: "Maquinaria",
     excerpt:
-      "Incorporación de equipos PRENSSO para fortalecer capacidad técnica en sistemas hidráulicos.",
-    image: "/images/products/prensa-phv65-real.jpg",
-    date: "12 Feb 2026",
+      "Recorrido nacional junto a Prensso Maquinarias para fortalecer soluciones industriales directamente en terreno.",
+    image: "/images/blog-recorre-pais.jpg",
+    date: "27 Mar 2026",
     readTime: "3 min",
   },
   {
-    slug: "visita-forceline-brasil",
-    title: "HTO Chile visita Forceline en Brasil para fortalecer alianzas industriales",
-    category: "Alianzas",
+    slug: "almacenamiento-mangueras",
+    title: "Cómo almacenar mangueras industriales correctamente y evitar fallas en operación",
+    category: "Industrial",
     excerpt:
-      "Visita a Forceline en Brasil para conocer su operación y fortalecer nuevas alianzas industriales.",
-    image: "/images/hero-hto-3.jpg",
-    date: "13 Mar 2026",
+      "Prácticas correctas de almacenamiento para evitar degradación prematura y fallas operacionales en mangueras.",
+    image: "/images/blog-almacenamiento.png",
+    date: "24 Mar 2026",
     readTime: "4 min",
   },
   {
-    slug: "mangueras-gran-diametro-mineria",
-    title: "Logística Especializada en Mangueras de Gran Diámetro para Minería",
-    category: "Minería",
+    slug: "visita-forceline-brasil",
+    title: "HTO Chile visita Forceline en Brasil para fortalecer nuevas alianzas industriales",
+    category: "Alianzas",
     excerpt:
-      "Soluciones logísticas para mangueras industriales de gran diámetro en operaciones mineras de Chile.",
-    image: "/images/hero-mining-hoses.jpg",
-    date: "26 Feb 2026",
+      "Visita a Forceline en Brasil para conocer su operación y fortalecer nuevas alianzas industriales.",
+    image: "/images/blog-forceline.jpeg",
+    date: "13 Mar 2026",
     readTime: "4 min",
   },
 ]

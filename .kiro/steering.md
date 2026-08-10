@@ -561,3 +561,43 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 - **Imports** limpiados (ChevronRight, Home removidos)
 - Deploy: producción actualizada (commits 3cf957c, 96b80aa)
 - Estado: ✅ Completado
+
+
+### 2026-08-09 — Migración completa blog WordPress → Emdash (producción)
+
+- **Contexto:** Blog antiguo WordPress levantado localmente en Docker (localhost:8080) desde `/Volumes/ICOV/Proyectos/htochile_older`
+- **Acceso recuperado:** Login wrangler con cuenta `htochilecl@gmail.com` (account ID: `d1361f54a94074823119c3eccfbb0f17`)
+- **D1 producción:** `htochile-blog-db` (ID: `b6c7c96a-b922-4b27-98c1-d16cb628a83b`)
+
+#### Cambios realizados:
+
+1. **Eliminación artículos anteriores:** 9 posts eliminados de D1 producción (eran artículos migrados previamente con contenido incompleto)
+2. **Migración completa de 10 artículos** desde WordPress local con:
+   - Contenido convertido a Portable Text (formato Emdash)
+   - Imágenes descargadas de WordPress y subidas como assets del Worker
+   - Fechas originales preservadas
+   - Slugs cortos mantenidos
+3. **CTA naranja eliminado:** Removido el bloque `.article-cta` de `src/pages/posts/[slug].astro` (solo queda el CTA verde `CTABanner.astro`)
+4. **wrangler.jsonc restaurado:** Configuración original apuntando a `htochile-blog-db` + KV `0bdae78de8814a93bef9a6d78bac467a`
+5. **3 deploys a Cloudflare Workers** (última version: `c51392eb-a058-41a0-a877-6f1336b460b1`)
+
+#### Artículos migrados (10):
+
+| # | Fecha | Slug | Imágenes |
+|---|-------|------|----------|
+| 1 | 2026-01-29 | el-origen-de-hto-chile | 3 |
+| 2 | 2026-02-12 | despacho-tecnico-perforacion | 4 |
+| 3 | 2026-02-12 | maquinaria-prensso | 10 |
+| 4 | 2026-02-12 | alianza-inaflex | 1 |
+| 5 | 2026-02-12 | armado-hidraulico-mmt200 | 3 |
+| 6 | 2026-02-19 | gestion-manguera-pvc-internacional | 4 |
+| 7 | 2026-02-26 | mangueras-gran-diametro-mineria | 7 |
+| 8 | 2026-03-13 | visita-forceline-brasil | 6 |
+| 9 | 2026-03-24 | almacenamiento-mangueras | 3 |
+| 10 | 2026-03-27 | hto-chile-recorre-el-pais | 5 |
+
+- **Total imágenes:** 58 archivos en `/public/images/blog/`
+- **Informe completo:** `/Volumes/ICOV/Proyectos/htochile-m2/INFORME-MIGRACION-BLOG.md`
+- **Estado:** ✅ Completado — todos los artículos HTTP 200 en blog.htochile.cl
+- **Pendiente anterior resuelto:** ✅ "Imágenes artículos del blog" — cada artículo ahora tiene sus imágenes correctas migradas directamente desde WordPress
+
