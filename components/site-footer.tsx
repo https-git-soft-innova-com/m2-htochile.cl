@@ -80,7 +80,7 @@ export function SiteFooter() {
             <ul className="mt-4 space-y-3 text-sm text-white/70">
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-accent" />
-                Nueva Providencia 2134, Of. 1001, RM
+                Vista Hermosa 9999, Cerrillos
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="size-4 shrink-0 text-accent" />
