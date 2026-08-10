@@ -43,7 +43,7 @@ const collaborators: Collaborator[] = [
     name: "Paula Ahumada",
     role: "Back Office — Ventas",
     image: "/images/team/paula-ahumada.jpg",
-    linkedin: "https://www.linkedin.com/in/paulachamorro-9829081b2/",
+    linkedin: "https://www.linkedin.com/in/paula-alejandra-ahumada-chamorro-9829081b2/",
   },
   {
     name: "Luis Felipe Chamorro Pinto",
