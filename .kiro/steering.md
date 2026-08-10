@@ -601,3 +601,39 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 - **Estado:** ✅ Completado — todos los artículos HTTP 200 en blog.htochile.cl
 - **Pendiente anterior resuelto:** ✅ "Imágenes artículos del blog" — cada artículo ahora tiene sus imágenes correctas migradas directamente desde WordPress
 
+
+
+### 2026-08-09 (cont.) — Integración blog en landing + validaciones
+
+- **Sección blog landing actualizada:** Los 3 artículos más recientes migrados desde WordPress ahora se muestran en htochile.cl
+  - `hto-chile-recorre-el-pais` (27 Mar 2026)
+  - `almacenamiento-mangueras` (24 Mar 2026)
+  - `visita-forceline-brasil` (13 Mar 2026)
+- **Imágenes featured** copiadas al proyecto landing: `blog-recorre-pais.jpg`, `blog-almacenamiento.png`, `blog-forceline.jpeg`
+- **Commit:** 5cef838 — `feat: actualizar sección blog con 3 artículos más recientes migrados desde WordPress`
+- **Deploy:** Vercel producción (forzado con `vercel --prod`)
+- **Verificado:** Las 3 imágenes y links funcionan correctamente en htochile.cl
+
+#### Validaciones realizadas:
+
+| Recurso | Estado |
+|---------|--------|
+| htochile.cl sin www (CNAME @) | ✅ Funciona — HTTP 200 directo |
+| api.docs.htochile.cl SSL | ❌ SSL handshake failure — certificado edge no emitido |
+| blog.htochile.cl (10 artículos) | ✅ Todos HTTP 200 |
+| Sección blog en landing | ✅ 3 artículos recientes visibles |
+
+#### Pendientes vigentes HTO Chile:
+
+| Tarea | Estado | Bloqueado por |
+|-------|--------|---------------|
+| api.docs.htochile.cl SSL | ❌ Handshake failure | Revisar config SSL en Cloudflare |
+| Imágenes Hero (#12) | 🚫 Bloqueado | Fotos de Caro |
+| GTM activadores (Pixel + LinkedIn) | 🚫 Bloqueado | IDs de comercial HTO |
+| GA4: Publicar contenedor GTM | ⏳ Pendiente | — |
+| Search Console: Verificar + sitemap | ⏳ Pendiente | — |
+| SEO Técnico + Lighthouse + OWASP | ⏳ Pendiente | — |
+| Panel Looker Studio | ⏳ Pendiente | GA4 acumulando datos |
+| Structured data (Organization, Product, Article) | ⏳ Pendiente | — |
+| R2: Aceptar TOS en dashboard CF | ⏳ Pendiente | Felipe (panel CF htochilecl) |
+
