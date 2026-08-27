@@ -7,6 +7,7 @@ import { HomeTeam } from "@/components/home/home-team"
 import { HomeDocCenter } from "@/components/home/home-doc-center"
 import { HomeBlog } from "@/components/home/home-blog"
 import { FinalCta } from "@/components/final-cta"
+import { ContactSection } from "@/components/contact-section"
 
 export default function HomePage() {
   return (
@@ -20,6 +21,7 @@ export default function HomePage() {
       <HomeDocCenter />
       <HomeBlog />
       <FinalCta />
+      <ContactSection />
     </>
   )
 }

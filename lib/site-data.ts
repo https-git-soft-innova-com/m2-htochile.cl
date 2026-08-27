@@ -11,7 +11,7 @@ export const nav = [
   { label: "Productos", href: "/productos" },
   { label: "Biblioteca Técnica", href: "/biblioteca-tecnica" },
   { label: "Blog", href: "https://blog.htochile.cl" },
-  { label: "Contacto", href: "/#contacto" },
+  { label: "Contacto", href: "/contacto" },
 ]
 
 export const heroSlides = [
@@ -890,7 +890,7 @@ export const blogPosts: BlogPost[] = [
     category: "Maquinaria",
     excerpt:
       "Recorrido nacional junto a Prensso Maquinarias para fortalecer soluciones industriales directamente en terreno.",
-    image: "/images/blog-recorre-pais.jpg",
+    image: "https://blog.htochile.cl/images/blog/hto-chile-recorre-el-pais-featured.jpg",
     date: "27 Mar 2026",
     readTime: "3 min",
   },
@@ -900,7 +900,7 @@ export const blogPosts: BlogPost[] = [
     category: "Industrial",
     excerpt:
       "Prácticas correctas de almacenamiento para evitar degradación prematura y fallas operacionales en mangueras.",
-    image: "/images/blog-almacenamiento.png",
+    image: "https://blog.htochile.cl/images/blog/almacenamiento-mangueras-featured.png",
     date: "24 Mar 2026",
     readTime: "4 min",
   },
@@ -910,7 +910,7 @@ export const blogPosts: BlogPost[] = [
     category: "Alianzas",
     excerpt:
       "Visita a Forceline en Brasil para conocer su operación y fortalecer nuevas alianzas industriales.",
-    image: "/images/blog-forceline.jpeg",
+    image: "https://blog.htochile.cl/images/blog/visita-forceline-brasil-02.jpeg",
     date: "13 Mar 2026",
     readTime: "4 min",
   },
