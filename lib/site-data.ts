@@ -351,7 +351,7 @@ export const products: Product[] = [
     group: "mangueras",
     brand: "Gates",
     industry: "Minería",
-    image: "/images/products/manguera-extrema-r15.jpg",
+    image: "/images/products/manguera-hidraulica-r15.png",
     short:
       "Manguera de 4 y 6 espirales de acero para equipos de minería y perforación con presiones extremas.",
     specs: [
