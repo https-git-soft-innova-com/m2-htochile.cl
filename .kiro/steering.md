@@ -637,3 +637,12 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 | Structured data (Organization, Product, Article) | ⏳ Pendiente | — |
 | R2: Aceptar TOS en dashboard CF | ⏳ Pendiente | Felipe (panel CF htochilecl) |
 
+
+
+### 2026-08-10 — Actualización contacto + LinkedIn Paula
+
+- **site-footer.tsx:** Dirección de contacto cambiada de "Nueva Providencia 2134, Of. 1001, RM" a "Vista Hermosa 9999, Cerrillos"
+- **home-team.tsx:** LinkedIn agregado a Paula Ahumada: https://www.linkedin.com/in/paulachamorro-9829081b2/
+- **Commit:** 1f1f6ed — push directo a main
+- **Deploy:** Vercel automático desde main
+- Estado: ✅ Completado

@@ -84,7 +84,11 @@ export function SiteFooter() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="size-4 shrink-0 text-accent" />
-                +56 9 7724 1488
+                <a href="tel:+56968575305" className="hover:text-accent">+56 9 6857 5305</a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <Phone className="size-4 shrink-0 text-accent" />
+                <a href="tel:+56984400376" className="hover:text-accent">+56 9 8440 0376</a>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="size-4 shrink-0 text-accent" />

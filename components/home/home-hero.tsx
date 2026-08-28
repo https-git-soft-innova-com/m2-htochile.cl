@@ -108,12 +108,13 @@ export function HomeHero() {
         </div>
 
         {/* Formulario rápido WhatsApp */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.4 }}
-          className="w-full max-w-sm lg:mt-16 rounded-2xl border border-white/15 bg-transparent p-6 backdrop-blur-sm"
-        >
+        <div className="w-full max-w-sm lg:mt-16">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+            className="rounded-2xl border border-white/15 bg-transparent p-6 backdrop-blur-sm"
+          >
           <div className="mb-4 flex items-center gap-3">
             <div className="flex size-10 items-center justify-center rounded-full bg-[var(--accent)]/20">
               <MessageCircle className="size-5 text-[var(--accent)]" />
@@ -182,19 +183,21 @@ export function HomeHero() {
               <MessageCircle className="size-4" />
               Enviar por WhatsApp
             </Button>
-          </form>
-        </motion.div>
+            </form>
+          </motion.div>
+        </div>
         </div>
 
+        <div className="mt-14 grid gap-6 lg:grid-cols-2 lg:items-stretch">
         {/* floating statistics */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45 }}
-          className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-white/15 bg-white/10 backdrop-blur-md sm:max-w-3xl lg:grid-cols-4"
+          className="grid min-h-28 w-full grid-cols-2 gap-px overflow-hidden rounded-xl border border-white/15 bg-white/10 backdrop-blur-md sm:max-w-none lg:self-start lg:grid-cols-4"
         >
           {stats.map((s) => (
-            <div key={s.label} className="bg-white/5 px-5 py-5">
+            <div key={s.label} className="flex flex-col justify-center bg-white/5 px-5 py-5">
               <div className="text-2xl font-bold text-accent sm:text-3xl">
                 {s.value}
               </div>
@@ -203,12 +206,21 @@ export function HomeHero() {
           ))}
         </motion.div>
 
+        <div className="ml-auto flex min-h-56 w-full max-w-sm items-center justify-center">
+          <img
+            src="/images/logo-prensso.webp"
+            alt="PRENSSO"
+            className="h-56 w-auto object-contain"
+          />
+        </div>
+        </div>
+
         {/* certifications bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55 }}
-          className="mt-6 flex flex-wrap items-center justify-center gap-6 px-6 py-4 sm:max-w-3xl"
+          className="mt-6 flex w-full flex-wrap items-center justify-center gap-6 px-6 py-4 sm:max-w-3xl"
         >
           {[
             { src: "/images/certificaciones/iso-9001.png", alt: "ISO 9001" },

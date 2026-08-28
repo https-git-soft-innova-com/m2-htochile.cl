@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "archivedAt": "2026-08-25T23:03:56.074Z",
+  "status": "interrupted",
+  "taskState": "interrupted",
+  "workingTask": "en el footer y en contacto,  elimina el celular que aparece y coloca estos dos:\n+56 9 6857 5305\n+56 9 8440 0376",
+  "lastCompleted": "Actualicé el contacto del footer para eliminar +56 9 7724 1488 y mostrar +56 9 6857 5305 y +56 9 8440 0376 como enlaces telefónicos. La validación de lint no pudo ejecutarse porque eslint no está instalado.",
+  "lastTurn": "en el footer y en contacto,  elimina el celular que aparece y coloca estos dos:\n+56 9 6857 5305\n+56 9 8440 0376",
+  "activeRepositories": [
+    "/Volumes/ICOV/Proyectos/htochile-m2"
+  ],
+  "dirtyRepositories": [
+    "/Volumes/ICOV/Proyectos/htochile-m2"
+  ],
+  "repositories": [
+    {
+      "root": "/Volumes/ICOV/Proyectos/htochile-m2",
+      "branch": "main",
+      "head": "23ecff9",
+      "modified": [
+        ".kiro/steering.md",
+        "QA-REPORT.md",
+        "components/site-footer.tsx"
+      ],
+      "staged": [],
+      "untracked": [
+        ".obsidian/",
+        ".pi/",
+        "CONTEXTO_ARROBA_ECOSYSTEM.md",
+        "INFORME-MIGRACION-BLOG.md",
+        "MANUAL-LINKEDIN.pdf",
+        "MANUAL-META-PIXEL.pdf",
+        "app/apple-icon.png",
+        "app/favicon.ico",
+        "app/icon.svg",
+        "\"bugfix 1.md\"",
+        "bugfix.bugfix.md",
+        "bugfix.md",
+        "feature.design.md",
+        "feature.requirements.md",
+        "feature.tasks.md"
+      ],
+      "commitPending": true
+    }
+  ],
+  "git": {
+    "root": "/Volumes/ICOV/Proyectos/htochile-m2",
+    "branch": "main",
+    "head": "23ecff9",
+    "modified": [
+      ".kiro/steering.md",
+      "QA-REPORT.md",
+      "components/site-footer.tsx"
+    ],
+    "staged": [],
+    "untracked": [
+      ".obsidian/",
+      ".pi/",
+      "CONTEXTO_ARROBA_ECOSYSTEM.md",
+      "INFORME-MIGRACION-BLOG.md",
+      "MANUAL-LINKEDIN.pdf",
+      "MANUAL-META-PIXEL.pdf",
+      "app/apple-icon.png",
+      "app/favicon.ico",
+      "app/icon.svg",
+      "\"bugfix 1.md\"",
+      "bugfix.bugfix.md",
+      "bugfix.md",
+      "feature.design.md",
+      "feature.requirements.md",
+      "feature.tasks.md"
+    ],
+    "commitPending": true
+  },
+  "sessionId": "01a03aff-d563-7f7d-bb07-c0fa01512671"
+}

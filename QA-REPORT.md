@@ -3,12 +3,12 @@
 
 ## 1. Disponibilidad
 
-| Endpoint | Status | Tiempo | Resultado |
-|----------|--------|--------|-----------|
-| htochile-m2.vercel.app (Web) | ✅ 200 | <500ms | HTML válido |
-| 161.35.5.30/health (API) | ✅ 200 | <200ms | JSON `{"status":"ok","docs":60}` |
-| 161.35.5.30/api/docs (Docs) | ✅ 200 | <300ms | JSON array, 4+ docs |
-| htochile-blog.workers.dev | ✅ 200 | <800ms | HTML (body vacío - requiere fix frontend) |
+| Endpoint                     | Status | Tiempo | Resultado                                 |
+| ---------------------------- | ------ | ------ | ----------------------------------------- |
+| htochile-m2.vercel.app (Web) | ✅ 200  | <500ms | HTML válido                               |
+| 161.35.5.30/health (API)     | ✅ 200  | <200ms | JSON `{"status":"ok","docs":60}`          |
+| 161.35.5.30/api/docs (Docs)  | ✅ 200  | <300ms | JSON array, 4+ docs                       |
+| htochile-blog.workers.dev    | ✅ 200  | <800ms | HTML (body vacío - requiere fix frontend) |
 
 ## 2. Security Headers
 
