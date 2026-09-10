@@ -43,7 +43,7 @@ export default function ProductoPage() {
           empresa: data.empresa,
           email: data.email,
           celular: data.celular,
-          documento_key: `ficha-tecnica-${product.slug}`,
+          documento_key: product.documentKey || `ficha-tecnica-${product.slug}`,
         }),
       })
       await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE, {

@@ -308,6 +308,7 @@ export type Product = {
   industry: string
   image: string
   short: string
+  documentKey?: string
   specs: { label: string; value: string }[]
 }
 
@@ -327,6 +328,57 @@ export const productBrands = ["Parker", "Gates", "Manuli", "Semperit", "Eaton", 
 
 export const products: Product[] = [
   // === MANGUERAS ===
+  {
+    slug: "manguera-hidraulica-4sh",
+    name: "Manguera Hidráulica 4SH",
+    category: "Mangueras Hidráulicas",
+    group: "mangueras",
+    brand: "Letone",
+    industry: "Minería",
+    image: "/images/products/manguera-hidraulica-4sh.png",
+    documentKey: "ficha-tecnica-manguera-hidraulica-4sh",
+    short:
+      "Manguera hidráulica de cuatro espirales de acero para aplicaciones de muy alta presión y servicio severo.",
+    specs: [
+      { label: "Construcción", value: "Cuatro espirales de acero de alta resistencia" },
+      { label: "Norma", value: "EN 856 4SH / SAE 100 R12" },
+      { label: "Aplicación", value: "Sistemas hidráulicos de alta y extrema presión" },
+    ],
+  },
+  {
+    slug: "manguera-hidraulica-4sp",
+    name: "Manguera Hidráulica 4SP",
+    category: "Mangueras Hidráulicas",
+    group: "mangueras",
+    brand: "Letone",
+    industry: "Minería",
+    image: "/images/products/manguera-hidraulica-4sp.png",
+    documentKey: "ficha-tecnica-manguera-hidraulica-4sp",
+    short:
+      "Manguera hidráulica de cuatro espirales de acero diseñada para soportar alta presión en maquinaria y equipos industriales.",
+    specs: [
+      { label: "Construcción", value: "Cuatro espirales de acero de alta resistencia" },
+      { label: "Norma", value: "EN 856 4SP" },
+      { label: "Aplicación", value: "Maquinaria pesada y sistemas hidráulicos" },
+    ],
+  },
+  {
+    slug: "manguera-hidraulica-r2",
+    name: "Manguera Hidráulica R2",
+    category: "Mangueras Hidráulicas",
+    group: "mangueras",
+    brand: "Letone",
+    industry: "Minería",
+    image: "/images/products/manguera-hidraulica-r2-nueva.png",
+    documentKey: "ficha-tecnica-manguera-hidraulica-r2",
+    short:
+      "Manguera hidráulica de doble trenzado de acero para líneas de alta presión en equipos móviles e industriales.",
+    specs: [
+      { label: "Construcción", value: "Doble trenzado de alambre de acero" },
+      { label: "Norma", value: "SAE 100 R2AT / EN 853 2SN" },
+      { label: "Aplicación", value: "Sistemas hidráulicos de alta presión" },
+    ],
+  },
   {
     slug: "manguera-hidraulica-alta-presion",
     name: "Manguera Hidráulica Alta Presión SAE 100 R2",
