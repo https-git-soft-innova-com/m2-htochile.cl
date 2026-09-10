@@ -28,7 +28,7 @@ const categories = [
       "Conexiones JIC 37°, BSP, ORFS en acero carbono zincado para líneas hidráulicas de media y alta presión.",
     image: "/images/products/conexion-jic-real.jpg",
     icon: Wrench,
-    count: 1,
+    count: 12,
   },
   {
     slug: "prensas",
