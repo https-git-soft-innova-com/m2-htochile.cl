@@ -210,7 +210,7 @@ export function HomeHero() {
           <img
             src="/images/logo-prensso.webp"
             alt="PRENSSO"
-            className="h-56 w-auto object-contain"
+            className="h-[16.8rem] w-auto object-contain"
           />
         </div>
         </div>
