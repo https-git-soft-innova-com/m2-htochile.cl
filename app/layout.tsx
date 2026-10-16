@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "HTO Chile",
     images: [
       {
-        url: "/images/hero-hydraulic-1.jpg",
+        url: "https://htochile.cl/images/hero-hydraulic-1.jpg",
         width: 1200,
         height: 630,
         alt: "HTO Chile - Mangueras Hidráulicas e Industriales",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "HTO Chile | Mangueras Hidráulicas e Industriales",
     description:
       "Mangueras hidráulicas, industriales y maquinaria PRENSSO. Cotización en 2 hrs, despacho en 24 hrs.",
-    images: ["/images/hero-hydraulic-1.jpg"],
+    images: ["https://htochile.cl/images/hero-hydraulic-1.jpg"],
   },
   robots: {
     index: true,
