@@ -635,7 +635,7 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 | SEO Técnico + Lighthouse + OWASP | ⏳ Pendiente | — |
 | Panel Looker Studio | ⏳ Pendiente | GA4 acumulando datos |
 | Structured data (Organization, Product, Article) | ⏳ Pendiente | — |
-| R2: Aceptar TOS en dashboard CF | ⏳ Pendiente | Felipe (panel CF htochilecl) |
+| R2: Aceptar TOS en dashboard CF | ✅ Hecho (2026-11-05) | bucket-htochile |
 
 
 
@@ -646,3 +646,39 @@ Dominio htochile.cl traspasado a Cloudflare. NS cambiados en NIC.cl.
 - **Commit:** 1f1f6ed — push directo a main
 - **Deploy:** Vercel automático desde main
 - Estado: ✅ Completado
+
+### 2026-11-05 — Blog: subida de imágenes desde el admin con R2
+
+Objetivo: que los usuarios suban contenido e imágenes desde `https://blog.htochile.cl/_emdash/admin` de forma autónoma.
+
+#### Acceso
+- **Cuenta Cloudflare del blog y del dominio htochile.cl:** htochilecl@gmail.com — Account ID `d1361f54a94074823119c3eccfbb0f17`
+- **Wrangler:** iniciar sesión con esa cuenta (`wrangler login` → htochilecl@gmail.com) y `export CLOUDFLARE_ACCOUNT_ID=d1361f54a94074823119c3eccfbb0f17`
+- **Ejecutar wrangler en el repo:** `node node_modules/wrangler/bin/wrangler.js ...` (desde `/Volumes/ICOV/Proyectos/htochile-blog`)
+- **Build:** `./node_modules/.bin/astro build` (~5–9 min)
+- **NIC Chile:** htochile.cl apunta a los nameservers de Cloudflare de la cuenta htochilecl (sue / troy)
+
+#### Recursos de producción (Worker `htochile-blog`)
+| Binding | Recurso |
+|---|---|
+| DB | D1 `htochile-blog-db` — `b6c7c96a-b922-4b27-98c1-d16cb628a83b` |
+| SESSION | KV `htochile-blog-session` — `0bdae78de8814a93bef9a6d78bac467a` |
+| MEDIA | R2 `bucket-htochile` (nuevo) |
+| IMAGES / ASSETS / LOADER | Images, Assets, Worker Loader |
+
+#### Cambios realizados
+- R2 habilitado y bucket `bucket-htochile` creado en la cuenta htochilecl.
+- `wrangler.jsonc`: agregado `"r2_buckets": [{ "binding": "MEDIA", "bucket_name": "bucket-htochile" }]`.
+- `astro.config.mjs`: `import { d1, r2, sandbox } from "@emdash-cms/cloudflare"` y `storage: r2({ binding: "MEDIA" })` dentro de `emdash({...})`.
+- Las imágenes subidas desde el admin se guardan en R2 y se sirven en `/_emdash/api/media/file/<key>`.
+- Deploy: versión `e18b3501-ea16-4831-b282-ecda0e9dad88` (anterior `54fa1d5d-dee9-4f78-8ab1-e3c09008e749`, para rollback: `wrangler rollback <id> --name htochile-blog`).
+- Backups de config: `.backup-pre-prod-20261105-195643/` en el repo del blog.
+
+#### Validación
+- Portada, posts (`/posts/<slug>`), imágenes estáticas y admin responden igual que antes.
+- D1 sin cambios: 11 posts publicados, 2 medios.
+- Subida de imagen desde el admin: ✅ funciona y guarda los cambios.
+
+#### Pendiente
+- Invitar a los usuarios del blog con rol Contributor o superior.
+- Inicializar Git en `/Volumes/ICOV/Proyectos/htochile-blog`.
