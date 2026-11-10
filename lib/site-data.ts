@@ -308,6 +308,7 @@ export type Product = {
   industry: string
   image: string
   short: string
+  fichaUrl?: string
   specs: { label: string; value: string }[]
 }
 
@@ -420,6 +421,7 @@ export const products: Product[] = [
     brand: "Letone",
     industry: "Construcción",
     image: "/images/products/pvc-aire-agua-amarilla.jpg",
+    fichaUrl: "https://softinnovacom-my.sharepoint.com/:b:/g/personal/carolina_arce_htochile_cl/IQBYcnk9yVzbQrkOA6nSfEUpAaoi2JEnLy5gnoL4eg2UFz8?e=HpMzgN",
     short: "Manguera PVC amarilla para aire y agua, presión de trabajo 300 PSI.",
     specs: [
       { label: "Presión", value: "300 PSI" },
