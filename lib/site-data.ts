@@ -415,7 +415,7 @@ export const products: Product[] = [
   },
   {
     slug: "pvc-aire-agua-amarilla-300psi",
-    name: "Manguera PVC Aire/Agua Amarilla 300 PSI",
+    name: "Manguera PVC Aire/Agua Amarilla Rock Mining",
     category: "Mangueras PVC",
     group: "mangueras",
     brand: "Letone",
