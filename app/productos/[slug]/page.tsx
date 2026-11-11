@@ -69,8 +69,8 @@ export default function ProductoPage() {
     }
     setDownloading(false)
     setModalOpen(false)
-    // Redirect to biblioteca where they can search for the doc
-    window.open("https://www.htochile.cl/biblioteca-tecnica", "_blank")
+    // Ficha con link propio (SharePoint) o redirección a biblioteca
+    window.open(product.fichaUrl || "https://www.htochile.cl/biblioteca-tecnica", "_blank")
   }
 
   return (
