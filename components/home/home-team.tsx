@@ -22,7 +22,7 @@ interface Collaborator {
 const collaborators: Collaborator[] = [
   {
     name: "Patricio Ahumada Tabitaud",
-    role: "Director — Gerente de Logística y Operaciones",
+    role: "Gerente General",
     image: "/images/team/patricio-ahumada.png",
     linkedin: "https://www.linkedin.com/in/patricio-alexander-ahumada-tabitaud-48a34741/",
   },
